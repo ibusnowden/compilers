@@ -1,0 +1,5 @@
+%b0 = buffer i32 1
+%b1 = store %b0 0 1
+%b2 = store %b1 0 2
+%b3 = store %b2 0 3
+%t = assert (load %b3 0) 3

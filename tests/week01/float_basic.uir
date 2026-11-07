@@ -1,0 +1,6 @@
+%t1 = assert (add 0.5 0.25) 0.75
+%t2 = assert (mul 1.5 4.0) 6.0
+%t3 = assert (div 1.0 4.0) 0.25
+%t4 = assert (sub 1.0 1.5) -0.5
+%t5 = assert (neg 2.5) -2.5
+%t6 = assert (max 1.0 -3.0) 1.0

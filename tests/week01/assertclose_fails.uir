@@ -1,0 +1,2 @@
+# expect: assert-fail
+%t = assertclose 1.0 1.1

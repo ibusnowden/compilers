@@ -1,0 +1,2 @@
+# expect: compile-error
+%t = permute [[1 2] [3 4]] [0 0]

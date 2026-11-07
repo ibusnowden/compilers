@@ -1,0 +1,7 @@
+# week: 3
+%b = buffer i32 10
+%i = range 10
+%s = store %b %i (mul %i %i)
+%b1 = end %s %i
+%t1 = assert (load %b1 3) 9
+%t2 = assert (load %b1 9) 81

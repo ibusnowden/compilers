@@ -1,0 +1,15 @@
+# 3x3 box filter with zero padding ("same" conv) as a sum of shifted views
+# max-kernels: 1
+%x = [[1 2 3] [4 5 6] [7 8 9]]
+%p = pad %x [[1 1] [1 1]]
+%s00 = shrink %p [[0 3] [0 3]]
+%s01 = shrink %p [[0 3] [1 4]]
+%s02 = shrink %p [[0 3] [2 5]]
+%s10 = shrink %p [[1 4] [0 3]]
+%s11 = shrink %p [[1 4] [1 4]]
+%s12 = shrink %p [[1 4] [2 5]]
+%s20 = shrink %p [[2 5] [0 3]]
+%s21 = shrink %p [[2 5] [1 4]]
+%s22 = shrink %p [[2 5] [2 5]]
+%y = add (add (add %s00 %s01) (add %s02 %s10)) (add (add %s11 %s12) (add (add %s20 %s21) %s22))
+%t = assert %y [[12 21 16] [27 45 33] [24 39 28]]

@@ -1,0 +1,4 @@
+# expect: compile-error
+%b = buffer i32 4
+%s = store %b 0 1
+%e = end %s 3

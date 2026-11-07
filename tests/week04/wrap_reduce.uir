@@ -1,0 +1,3 @@
+# i32 reductions wrap too
+%x = expand 1073741824 4
+%t = assert (reduce %x op=add pop=1) 0

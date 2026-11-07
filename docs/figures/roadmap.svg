@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 670" width="980" height="670">
+<rect x="0.5" y="0.5" width="979" height="669" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">The semester as a stack</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">each week is built on top of everything below it; nothing is thrown away</text>
+<rect x="170.0" y="80.0" width="640.0" height="40.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="192.0" y="104.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="start">week 12–14</text>
+<text x="275.0" y="104.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Final project</text>
+<text x="480.0" y="104.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">implement a paper · port to new hardware · your idea</text>
+<rect x="160.0" y="126.0" width="660.0" height="40.0" rx="8" fill="#fdf7dc" stroke="#c9a227" stroke-width="1.5" opacity="1"/>
+<text x="182.0" y="150.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#6d5608" text-anchor="start">week 11</text>
+<text x="265.0" y="150.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">SOTA inference &amp; training</text>
+<text x="480.0" y="150.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">Llama/Qwen decode · GPT-2 124M training · JIT</text>
+<rect x="150.0" y="172.0" width="680.0" height="40.0" rx="8" fill="#fdf7dc" stroke="#c9a227" stroke-width="1.5" opacity="1"/>
+<text x="172.0" y="196.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#6d5608" text-anchor="start">week 10</text>
+<text x="255.0" y="196.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Multiple GPUs</text>
+<text x="480.0" y="196.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">sharding · allreduce · data &amp; tensor parallel</text>
+<rect x="140.0" y="218.0" width="700.0" height="40.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="162.0" y="242.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="start">week 9</text>
+<text x="245.0" y="242.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">GPUs part 2</text>
+<text x="480.0" y="242.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">tensor cores · fast GEMM · implicit-GEMM conv · flash attention</text>
+<rect x="130.0" y="264.0" width="720.0" height="40.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="152.0" y="288.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="start">week 8</text>
+<text x="235.0" y="288.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">GPUs</text>
+<text x="480.0" y="288.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">SIMT · axis mapping · coalescing · NVRTC + driver API</text>
+<rect x="120.0" y="310.0" width="740.0" height="40.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="142.0" y="334.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="start">week 7</text>
+<text x="225.0" y="334.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">CPU memory hierarchy</text>
+<text x="480.0" y="334.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">tiling · upcasting · threads · roofline · search</text>
+<rect x="110.0" y="356.0" width="760.0" height="40.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="132.0" y="380.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#1d3f8f" text-anchor="start">week 6</text>
+<text x="215.0" y="380.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Autodiff &amp; speed</text>
+<text x="480.0" y="380.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">Tensor API · reverse mode · safetensors · MNIST, GPT-2, ResNet</text>
+<rect x="100.0" y="402.0" width="780.0" height="40.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="122.0" y="426.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="start">week 5</text>
+<text x="205.0" y="426.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Movement ops</text>
+<text x="480.0" y="426.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">reshape · permute · pad · shrink · flip as index math</text>
+<rect x="90.0" y="448.0" width="800.0" height="40.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="112.0" y="472.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="start">week 4</text>
+<text x="195.0" y="472.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Rangeify, reduce, materialize</text>
+<text x="480.0" y="472.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">shapes → loops · accumulators · kernel boundaries</text>
+<rect x="80.0" y="494.0" width="820.0" height="40.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="102.0" y="518.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="start">week 3</text>
+<text x="185.0" y="518.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Loops, rendering &amp; runtime</text>
+<text x="480.0" y="518.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">range / end · C codegen · clang + ctypes</text>
+<rect x="70.0" y="540.0" width="840.0" height="40.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="92.0" y="564.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#165c3b" text-anchor="start">week 2</text>
+<text x="175.0" y="564.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">Loads, stores &amp; memory</text>
+<text x="480.0" y="564.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">versioned buffers · write-after-read · linearize</text>
+<rect x="60.0" y="586.0" width="860.0" height="40.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="82.0" y="610.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#45297f" text-anchor="start">week 1</text>
+<text x="165.0" y="610.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="start">UOps &amp; rewrites</text>
+<text x="480.0" y="610.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">hash-consing · pattern matching · symbolic · bounds · λ-calculus</text>
+<text x="490.0" y="654.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle" font-style="italic">ground floor: a hash-consed graph and a rewrite engine</text>
+</svg>

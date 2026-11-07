@@ -1,0 +1,2 @@
+%i = range 100
+%t = assert (mod (mul %i 2) 2) 0

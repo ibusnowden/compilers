@@ -1,0 +1,4 @@
+%i = range 10
+%p1 = prove (cmplt %i 10)
+%p2 = prove (cmplt -1 %i)
+%p3 = prove (cmplt (mod %i 4) 4)

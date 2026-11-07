@@ -1,0 +1,15 @@
+# C = A @ B with explicit loops. A = [[1 2] [3 4]], B = [[5 6] [7 8]]
+%A = buffer f32 [1.0 2.0 3.0 4.0]
+%B = buffer f32 [5.0 6.0 7.0 8.0]
+%C = buffer f32 4
+%i = range 2
+%j = range 2
+%k = range 2
+%ij = add (mul %i 2) %j
+%prod = mul (load %A (add (mul %i 2) %k)) (load %B (add (mul %k 2) %j))
+%s = store %C %ij (add (load %C %ij) %prod)
+%C1 = end %s %i %j %k
+%t1 = assert (load %C1 0) 19.0
+%t2 = assert (load %C1 1) 22.0
+%t3 = assert (load %C1 2) 43.0
+%t4 = assert (load %C1 3) 50.0

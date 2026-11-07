@@ -1,0 +1,3 @@
+# expect: assert-fail
+%i = range 100
+%t = assert (cmplt %i 99)

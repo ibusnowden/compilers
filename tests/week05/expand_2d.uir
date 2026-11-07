@@ -1,0 +1,4 @@
+%row = [[1 2 3]]
+%t = assert (expand %row [2 3]) [[1 2 3] [1 2 3]]
+%col = reshape [10 20] [2 1]
+%t2 = assert (add (expand %col [2 3]) (expand %row [2 3])) [[11 12 13] [21 22 23]]

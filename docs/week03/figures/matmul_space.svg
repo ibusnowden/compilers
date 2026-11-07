@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" width="980" height="460">
+<rect x="0.5" y="0.5" width="979" height="459" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Matmul is a 3-D iteration space</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">C[i,j] += A[i,k] · B[k,j]:  i, j index the output; k is reduced</text>
+<polygon points="110.0,183.0 158.0,183.0 184.0,162.2 136.0,162.2" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,183.0 206.0,183.0 232.0,162.2 184.0,162.2" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="206.0,183.0 254.0,183.0 280.0,162.2 232.0,162.2" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="254.0,183.0 302.0,183.0 328.0,162.2 280.0,162.2" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="136.0,162.2 184.0,162.2 210.0,141.4 162.0,141.4" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="184.0,162.2 232.0,162.2 258.0,141.4 210.0,141.4" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="232.0,162.2 280.0,162.2 306.0,141.4 258.0,141.4" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="280.0,162.2 328.0,162.2 354.0,141.4 306.0,141.4" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="162.0,141.4 210.0,141.4 236.0,120.6 188.0,120.6" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="210.0,141.4 258.0,141.4 284.0,120.6 236.0,120.6" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="258.0,141.4 306.0,141.4 332.0,120.6 284.0,120.6" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="306.0,141.4 354.0,141.4 380.0,120.6 332.0,120.6" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="188.0,120.6 236.0,120.6 262.0,99.8 214.0,99.8" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="236.0,120.6 284.0,120.6 310.0,99.8 262.0,99.8" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="284.0,120.6 332.0,120.6 358.0,99.8 310.0,99.8" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="332.0,120.6 380.0,120.6 406.0,99.8 358.0,99.8" fill="#fbe8d2" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="302.0,375.0 328.0,354.2 328.0,306.2 302.0,327.0" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="302.0,327.0 328.0,306.2 328.0,258.2 302.0,279.0" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="302.0,279.0 328.0,258.2 328.0,210.2 302.0,231.0" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="302.0,231.0 328.0,210.2 328.0,162.2 302.0,183.0" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="328.0,354.2 354.0,333.4 354.0,285.4 328.0,306.2" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="328.0,306.2 354.0,285.4 354.0,237.4 328.0,258.2" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="328.0,258.2 354.0,237.4 354.0,189.4 328.0,210.2" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="328.0,210.2 354.0,189.4 354.0,141.4 328.0,162.2" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="354.0,333.4 380.0,312.6 380.0,264.6 354.0,285.4" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="354.0,285.4 380.0,264.6 380.0,216.6 354.0,237.4" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="354.0,237.4 380.0,216.6 380.0,168.6 354.0,189.4" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="354.0,189.4 380.0,168.6 380.0,120.6 354.0,141.4" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="380.0,312.6 406.0,291.8 406.0,243.8 380.0,264.6" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="380.0,264.6 406.0,243.8 406.0,195.8 380.0,216.6" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="380.0,216.6 406.0,195.8 406.0,147.8 380.0,168.6" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="380.0,168.6 406.0,147.8 406.0,99.8 380.0,120.6" fill="#f5dcbd" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="110.0,375.0 158.0,375.0 158.0,327.0 110.0,327.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="110.0,327.0 158.0,327.0 158.0,279.0 110.0,279.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="110.0,279.0 158.0,279.0 158.0,231.0 110.0,231.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="110.0,231.0 158.0,231.0 158.0,183.0 110.0,183.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,375.0 206.0,375.0 206.0,327.0 158.0,327.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,327.0 206.0,327.0 206.0,279.0 158.0,279.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,279.0 206.0,279.0 206.0,231.0 158.0,231.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,231.0 206.0,231.0 206.0,183.0 158.0,183.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="206.0,375.0 254.0,375.0 254.0,327.0 206.0,327.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="206.0,327.0 254.0,327.0 254.0,279.0 206.0,279.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="206.0,279.0 254.0,279.0 254.0,231.0 206.0,231.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="206.0,231.0 254.0,231.0 254.0,183.0 206.0,183.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="254.0,375.0 302.0,375.0 302.0,327.0 254.0,327.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="254.0,327.0 302.0,327.0 302.0,279.0 254.0,279.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="254.0,279.0 302.0,279.0 302.0,231.0 254.0,231.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="254.0,231.0 302.0,231.0 302.0,183.0 254.0,183.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="0.9" opacity="1"/>
+<polygon points="158.0,375.0 206.0,375.0 206.0,183.0 158.0,183.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.6" opacity="0.85"/>
+<text x="206.0" y="399.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">j  (output)</text>
+<text x="96.0" y="283.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="end">k  (reduce)</text>
+<text x="368.0" y="341.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="start">i  (output)</text>
+<text x="206.0" y="420.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#1d3f8f" text-anchor="middle">blue column: all k for one (i, j) = one C[i, j]</text>
+<rect x="530.0" y="92.0" width="420.0" height="114.0" rx="8" fill="#fbfbfd" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="542.0" y="113.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">the week-3 loop nest</text>
+<text x="542.0" y="139.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">for i in range(M):        # output</text>
+<text x="542.0" y="157.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  for j in range(N):      # output</text>
+<text x="542.0" y="175.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">    for k in range(K):    # reduce</text>
+<text x="542.0" y="193.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">      C[i*N+j] += A[i*K+k] * B[k*N+j]</text>
+<text x="740.0" y="254.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="middle">M·N·K multiply-adds,  M·N outputs</text>
+<text x="740.0" y="279.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">every (i, j) column is independent → parallel</text>
+<text x="740.0" y="301.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">every k step depends on the last → sequential</text>
+<text x="740.0" y="334.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 4 moves the += into a register;</text>
+<text x="740.0" y="354.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">weeks 7–9 tile all three axes for caches and tensor cores</text>
+</svg>

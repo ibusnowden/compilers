@@ -1,0 +1,10 @@
+# valid 1-D convolution (really cross-correlation): y[i] = sum_k x[i+k] * w[k]
+%x = buffer i32 [1 2 3 4 5 6]
+%w = buffer i32 [1 0 -1]
+%y = buffer i32 4
+%i = range 4
+%k = range 3
+%s = store %y %i (add (load %y %i) (mul (load %x (add %i %k)) (load %w %k)))
+%y1 = end %s %i %k
+%t1 = assert (load %y1 0) -2
+%t2 = assert (load %y1 3) -2

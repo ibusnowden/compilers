@@ -1,0 +1,5 @@
+# nested anonymous expressions and aliases
+%x = 7
+%y = (mul %x (add %x 1))
+%t = assert %y 56
+%t2 = assert (add (add (add 1 2) (add 3 4)) (add (add 5 6) (add 7 8))) 36

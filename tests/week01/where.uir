@@ -1,0 +1,4 @@
+%t1 = assert (where true 1 2) 1
+%t2 = assert (where false 1 2) 2
+%t3 = assert (where (cmplt 3 4) 10.5 -1.0) 10.5
+%t4 = assert (where (cmpeq 1 1) false true) false

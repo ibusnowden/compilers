@@ -1,0 +1,4 @@
+%t1 = assert (cmplt 1 2)
+%t2 = assert (not (cmplt 2 1))
+%t3 = assert (cmpeq 4 (add 2 2))
+%t4 = assert (cmpne 4 5)

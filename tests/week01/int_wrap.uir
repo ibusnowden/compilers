@@ -1,0 +1,8 @@
+# i32 wraps modulo 2^32
+%max = 2147483647
+%min = -2147483648
+%t1 = assert (add %max 1) %min
+%t2 = assert (sub %min 1) %max
+%t3 = assert (mul 65536 65536) 0
+%t4 = assert (mul 65537 65537) 131073
+%t5 = assert (neg %min) %min

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
+<rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">A fast GEMM is tiles inside tiles</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">each level stages data one step closer to the tensor cores; every level is a split range in your IR</text>
+<rect x="30.0" y="100.0" width="280.0" height="280.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="170.0" y="124.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="middle">C, tiled for the grid</text>
+<rect x="55.0" y="140.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="113.0" y="140.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="171.0" y="140.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="229.0" y="140.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="55.0" y="196.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="113.0" y="196.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="171.0" y="196.0" width="58.0" height="56.0" rx="0" fill="#2a9d9d" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="229.0" y="196.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="55.0" y="252.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="113.0" y="252.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="171.0" y="252.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="229.0" y="252.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="55.0" y="308.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="113.0" y="308.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="171.0" y="308.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="229.0" y="308.0" width="58.0" height="56.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<text x="170.0" y="373.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">block tile 128×128 → one CTA</text>
+<line x1="229.0" y1="196.0" x2="360.0" y2="110.0" stroke="#9aa3b2" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="229.0" y1="252.0" x2="360.0" y2="380.0" stroke="#9aa3b2" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="360.0" y="100.0" width="280.0" height="280.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="500.0" y="124.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="middle">block tile, split across warps</text>
+<rect x="385.0" y="140.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="443.0" y="140.0" width="58.0" height="112.0" rx="0" fill="#2e9e6a" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="501.0" y="140.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="559.0" y="140.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="385.0" y="252.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="443.0" y="252.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="501.0" y="252.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<rect x="559.0" y="252.0" width="58.0" height="112.0" rx="0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1" opacity="1"/>
+<text x="500.0" y="373.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">warp tile 64×32 (8 warps)</text>
+<line x1="501.0" y1="140.0" x2="690.0" y2="110.0" stroke="#9aa3b2" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="501.0" y1="252.0" x2="690.0" y2="380.0" stroke="#9aa3b2" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="690.0" y="100.0" width="260.0" height="280.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="820.0" y="124.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#165c3b" text-anchor="middle">warp tile in mma fragments</text>
+<rect x="715.0" y="140.0" width="52.0" height="52.0" rx="0" fill="#2e9e6a" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="767.0" y="140.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="819.0" y="140.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="871.0" y="140.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="715.0" y="192.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="767.0" y="192.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="819.0" y="192.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="871.0" y="192.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="715.0" y="244.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="767.0" y="244.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="819.0" y="244.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="871.0" y="244.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="715.0" y="296.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="767.0" y="296.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="819.0" y="296.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="871.0" y="296.0" width="52.0" height="52.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<text x="820.0" y="373.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">mma.m16n8k16: 16×8 per instruction</text>
+<text x="490.0" y="414.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">global → (cp.async / TMA) → shared memory → (ldmatrix) → registers → (mma) → accumulators in registers</text>
+</svg>

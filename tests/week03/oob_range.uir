@@ -1,0 +1,6 @@
+# expect: compile-error
+%b = buffer i32 4
+%i = range 5
+%s = store %b %i 1
+%b1 = end %s %i
+%t = assert (load %b1 0) 1

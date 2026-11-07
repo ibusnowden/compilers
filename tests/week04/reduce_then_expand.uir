@@ -1,0 +1,6 @@
+# x - max(x): the reduce result is used by every element.  Recompute it (1 kernel, O(n^2) work)
+# or materialize it (2 kernels).  Either is correct; the limit allows both.
+# max-kernels: 2
+%x = [1 5 3 2]
+%m = reduce %x op=max pop=1
+%t = assert (sub %x (expand %m 4)) [-4 0 -2 -3]

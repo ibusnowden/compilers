@@ -1,0 +1,7 @@
+# write-after-read: the load of %b1 must happen before the store that makes %b2
+%b0 = buffer i32 2
+%b1 = store %b0 0 1
+%b2 = store %b1 0 2
+%t1 = assert (load %b1 0) 1
+%t2 = assert (load %b2 0) 2
+%t3 = assert (load %b0 0) 0

@@ -1,0 +1,8 @@
+# two `range 4`s are different loops even though they look identical
+%b = buffer i32 16
+%i = range 4
+%j = range 4
+%s = store %b (add (mul %i 4) %j) (add (mul %i 10) %j)
+%b1 = end %s %i %j
+%t1 = assert (load %b1 6) 12
+%t2 = assert (load %b1 13) 31

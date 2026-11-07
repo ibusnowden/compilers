@@ -1,0 +1,4 @@
+# expect: compile-error
+# false at x = 10: a sound prover must not "prove" it
+%x = var 0 10
+%p = prove (cmplt %x 10)

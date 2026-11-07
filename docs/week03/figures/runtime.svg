@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" width="980" height="300">
+<rect x="0.5" y="0.5" width="979" height="299" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">From UOps to running code</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">the whole CPU runtime is ~60 lines of Python</text>
+<rect x="30.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="99.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="middle">UOps</text>
+<text x="99.0" y="218.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">linearized</text>
+<rect x="188.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="257.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">C source</text>
+<text x="257.0" y="218.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">render</text>
+<line x1="169.0" y1="150.0" x2="187.0" y2="150.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="346.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="415.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">clang</text>
+<text x="415.0" y="212.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">-O2 -fwrapv</text>
+<text x="415.0" y="225.4" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">-shared -fPIC</text>
+<line x1="327.0" y1="150.0" x2="345.0" y2="150.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="504.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="573.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">.so</text>
+<text x="573.0" y="212.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">cached by</text>
+<text x="573.0" y="225.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">hash(source)</text>
+<line x1="485.0" y1="150.0" x2="503.0" y2="150.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="662.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="731.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">ctypes</text>
+<text x="731.0" y="218.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">CDLL + argtypes</text>
+<line x1="643.0" y1="150.0" x2="661.0" y2="150.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="820.0" y="110.0" width="138.0" height="80.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="889.0" y="154.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="600" fill="#165c3b" text-anchor="middle">numpy buffers</text>
+<text x="889.0" y="212.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">pointers in,</text>
+<text x="889.0" y="225.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">results out</text>
+<line x1="801.0" y1="150.0" x2="819.0" y2="150.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<text x="490.0" y="269.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">asserts compile to `if (!(cond)) fail[0] = line;` and are checked by the host after the call</text>
+</svg>

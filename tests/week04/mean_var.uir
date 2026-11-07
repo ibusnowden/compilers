@@ -1,0 +1,7 @@
+# max-kernels: 3
+%x = [2.0 4.0 4.0 4.0 5.0 5.0 7.0 9.0]
+%mean = div (reduce %x op=add pop=1) 8.0
+%d = sub %x (expand %mean 8)
+%var = div (reduce (mul %d %d) op=add pop=1) 8.0
+%t1 = assert %mean 5.0
+%t2 = assert %var 4.0

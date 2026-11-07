@@ -1,0 +1,3 @@
+# expect: compile-error
+%x = var 0 3
+%p = prove (add %x 1)

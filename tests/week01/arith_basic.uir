@@ -1,0 +1,6 @@
+%a = mul (add 2 3) (sub 10 4)
+%t1 = assert %a 30
+%t2 = assert (neg %a) -30
+%t3 = assert (sub 3 10) -7
+%t4 = assert (max -4 9) 9
+%t5 = assert (min -4 9) -4

@@ -1,0 +1,7 @@
+# the store doesn't mention %i, but it is on the chain, so it runs 4 times
+# C's signed overflow is undefined behaviour: compile with -fwrapv (or use unsigned math)
+%o = buffer i32 1
+%i = range 4
+%s = store %o 0 (add (load %o 0) 1073741824)
+%o1 = end %s %i
+%t = assert (load %o1 0) 0

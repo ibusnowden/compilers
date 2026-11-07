@@ -1,0 +1,15 @@
+# 2-D valid convolution: 4x4 input, 3x3 box filter -> 2x2 output
+%x = buffer i32 [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]
+%y = buffer i32 4
+%oy = range 2
+%ox = range 2
+%ky = range 3
+%kx = range 3
+%src = add (mul (add %oy %ky) 4) (add %ox %kx)
+%dst = add (mul %oy 2) %ox
+%s = store %y %dst (add (load %y %dst) (load %x %src))
+%y1 = end %s %oy %ox %ky %kx
+%t1 = assert (load %y1 0) 54
+%t2 = assert (load %y1 1) 63
+%t3 = assert (load %y1 2) 90
+%t4 = assert (load %y1 3) 99

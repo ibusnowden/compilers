@@ -1,0 +1,8 @@
+%t1 = assert (sqrt 16.0) 4.0
+%t2 = assertclose (sqrt 2.0) 1.4142135
+%t3 = assertclose (exp2 10.0) 1024.0
+%t4 = assertclose (log2 1024.0) 10.0
+%t5 = assertclose (sin 0.0) 0.0
+%t6 = assertclose (sin 1.5707964) 1.0
+%t7 = assertclose (recip 8.0) 0.125
+%t8 = assertclose (exp2 -1.0) 0.5

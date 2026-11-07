@@ -1,0 +1,9 @@
+# these are exactly the index expressions `reshape` produces in week 5
+%x = var 0 100
+%y = var 0 3
+%p1 = prove (cmpeq (div (add (mul %x 4) 3) 4) %x)
+%p2 = prove (cmpeq (mod (add (mul %x 4) 3) 4) 3)
+%p3 = prove (cmpeq (div (add (mul %x 4) %y) 4) %x)
+%p4 = prove (cmpeq (mod (add (mul %x 4) %y) 4) %y)
+%p5 = prove (cmpeq (div (mul %x 2) 2) %x)
+%p6 = prove (cmplt (mod %x 7) 7)

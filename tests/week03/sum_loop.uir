@@ -1,0 +1,7 @@
+# accumulate: inside the loop, %acc0 means "the current contents"
+%a = buffer i32 [1 2 3 4 5 6 7 8 9 10]
+%acc0 = buffer i32 1
+%i = range 10
+%s = store %acc0 0 (add (load %acc0 0) (load %a %i))
+%acc = end %s %i
+%t = assert (load %acc 0) 55

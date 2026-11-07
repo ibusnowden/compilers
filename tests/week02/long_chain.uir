@@ -1,0 +1,11 @@
+# 64 stores into one 4-element buffer; with copies on every store you'd be fine,
+# but a good linearizer needs none
+%b0 = buffer i32 4
+%b1 = store %b0 0 (add (load %b0 0) 1)
+%b2 = store %b1 0 (add (load %b1 0) 1)
+%b3 = store %b2 0 (add (load %b2 0) 1)
+%b4 = store %b3 0 (add (load %b3 0) 1)
+%b5 = store %b4 1 (mul (load %b4 0) 2)
+%b6 = store %b5 2 (mul (load %b5 1) 2)
+%b7 = store %b6 3 (mul (load %b6 2) 2)
+%t = assert (add (add (load %b7 0) (load %b7 1)) (add (load %b7 2) (load %b7 3))) 60

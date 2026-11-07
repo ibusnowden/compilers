@@ -1,0 +1,6 @@
+# C semantics: division truncates toward zero
+%t1 = assert (div 7 2) 3
+%t2 = assert (div -7 2) -3
+%t3 = assert (div 7 -2) -3
+%t4 = assert (div -7 -2) 3
+%t5 = assert (div 0 5) 0

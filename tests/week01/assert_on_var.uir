@@ -1,0 +1,4 @@
+# expect: compile-error
+# vars are symbolic: they may only be used by `prove`
+%x = var 0 3
+%t = assert (add %x 1) 2

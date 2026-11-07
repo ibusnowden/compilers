@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400">
+<rect x="0.5" y="0.5" width="979" height="399" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="m2e9e6a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e9e6a"/></marker></defs>
+<defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">realize(): from a lazy graph to launches</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">the scheduler cuts the graph at materialized UOps; each piece is one kernel; the cache is keyed by the kernel&#x27;s AST</text>
+<rect x="30.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="99.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="middle">lazy UOp graph</text>
+<text x="99.0" y="223.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">Tensor ops</text>
+<rect x="188.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="257.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">schedule</text>
+<text x="257.0" y="217.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">cut at buffers →</text>
+<text x="257.0" y="230.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">list of kernels</text>
+<line x1="169.0" y1="155.0" x2="187.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="346.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="415.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">kernel AST</text>
+<text x="415.0" y="217.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">rangeified,</text>
+<text x="415.0" y="230.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">simplified</text>
+<line x1="327.0" y1="155.0" x2="345.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="504.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="573.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">cache lookup</text>
+<text x="573.0" y="217.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">hash-consed AST</text>
+<text x="573.0" y="230.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">is the key</text>
+<line x1="485.0" y1="155.0" x2="503.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="662.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="731.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">compile</text>
+<text x="731.0" y="223.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">only on a miss</text>
+<line x1="643.0" y1="155.0" x2="661.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="820.0" y="120.0" width="138.0" height="70.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="889.0" y="159.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#165c3b" text-anchor="middle">launch</text>
+<text x="889.0" y="217.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">bind buffers,</text>
+<text x="889.0" y="230.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">run</text>
+<line x1="801.0" y1="155.0" x2="819.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<path d="M573.0,190.0 L573.0,270.0 L889.0,270.0 L889.0,190.0" fill="none" stroke="#2e9e6a" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#m2e9e6a)"/>
+<text x="731.0" y="287.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">hit: skip compile</text>
+<text x="490.0" y="344.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">hash-consing pays again: identical kernels are the identical UOp, so the cache key is free</text>
+</svg>

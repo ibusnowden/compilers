@@ -1,0 +1,4 @@
+# week: 5
+%matrix = reshape [1 2 3 4] [2 2]
+%transposed = permute %matrix [1 0]
+%test = assert (index %transposed 1 0) 2

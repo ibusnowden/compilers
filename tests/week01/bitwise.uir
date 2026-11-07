@@ -1,0 +1,7 @@
+%t1 = assert (and 12 10) 8
+%t2 = assert (or 12 10) 14
+%t3 = assert (xor 12 10) 6
+%t4 = assert (and -1 255) 255
+%t5 = assert (xor true true) false
+%t6 = assert (or false true) true
+%t7 = assert (and true false) false

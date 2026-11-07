@@ -1,0 +1,2 @@
+# expect: compile-error
+%t = [1 2.0 3]

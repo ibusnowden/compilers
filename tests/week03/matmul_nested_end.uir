@@ -1,0 +1,13 @@
+# the same matmul, with the reduction loop ended separately (inner end)
+%A = buffer i32 [1 2 3 4]
+%B = buffer i32 [5 6 7 8]
+%C = buffer i32 4
+%i = range 2
+%j = range 2
+%k = range 2
+%ij = add (mul %i 2) %j
+%prod = mul (load %A (add (mul %i 2) %k)) (load %B (add (mul %k 2) %j))
+%s = store %C %ij (add (load %C %ij) %prod)
+%inner = end %s %k
+%C1 = end %inner %i %j
+%t = assert (load %C1 3) 50

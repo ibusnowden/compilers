@@ -1,0 +1,4 @@
+%b0 = buffer i32 [0 0 0 0 0 0 0 0]
+%k = add (mul 2 3) 1
+%b1 = store %b0 %k 42
+%t = assert (load %b1 7) 42

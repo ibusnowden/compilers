@@ -1,0 +1,12 @@
+# conv as a matmul over windows: windows[oy, ox, ky, kx] = x[oy+ky, ox+kx]
+# max-kernels: 2
+%x = reshape [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15] [4 4]
+%w = [[1 0] [0 -1]]
+%r00 = reshape (shrink %x [[0 3] [0 3]]) [3 3 1]
+%r01 = reshape (shrink %x [[0 3] [1 4]]) [3 3 1]
+%r10 = reshape (shrink %x [[1 4] [0 3]]) [3 3 1]
+%r11 = reshape (shrink %x [[1 4] [1 4]]) [3 3 1]
+%win = add (add (pad %r00 [[0 0] [0 0] [0 3]]) (pad %r01 [[0 0] [0 0] [1 2]])) (add (pad %r10 [[0 0] [0 0] [2 1]]) (pad %r11 [[0 0] [0 0] [3 0]]))
+%wf = expand (reshape %w [1 1 4]) [3 3 4]
+%y = reduce (mul (contiguous %win) %wf) op=add pop=1
+%t = assert %y [[-5 -5 -5] [-5 -5 -5] [-5 -5 -5]]

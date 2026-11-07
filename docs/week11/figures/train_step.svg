@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" width="980" height="300">
+<rect x="0.5" y="0.5" width="979" height="299" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">One training step, captured once and replayed</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">the JIT records the kernel launches of a step; later steps rebind the input buffers and launch the same list</text>
+<rect x="40.0" y="120.0" width="100.0" height="50.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="90.0" y="149.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">load batch</text>
+<rect x="146.0" y="120.0" width="240.0" height="50.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="266.0" y="149.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">forward (bf16)</text>
+<rect x="392.0" y="120.0" width="340.0" height="50.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="562.0" y="149.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">backward</text>
+<rect x="738.0" y="120.0" width="200.0" height="50.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="838.0" y="149.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">clip + AdamW</text>
+<text x="490.0" y="209.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">first call: trace → schedule → compile → run    ·    later calls: run only</text>
+<text x="490.0" y="244.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">MFU = (6·N·tokens/s + attention FLOPs) / peak FLOP/s.  Report yours next to PyTorch&#x27;s on the same GPU.</text>
+</svg>

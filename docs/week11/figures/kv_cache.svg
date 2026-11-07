@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 340" width="980" height="340">
+<rect x="0.5" y="0.5" width="979" height="339" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">The KV cache turns O(T²) recompute into O(T) reads</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">prefill the prompt once; each new token appends one k, v row and attends over the cache</text>
+<rect x="80.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="80.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="130.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="130.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="180.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="180.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="230.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="230.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="280.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="280.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="330.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="330.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e5f5ec" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="380.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#e8effc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="380.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#e8effc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="430.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="430.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="480.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="480.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="530.0" y="120.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<rect x="530.0" y="170.0" width="50.0" height="40.0" rx="0" fill="#fafbfc" stroke="#9aa3b2" stroke-width="1" opacity="1"/>
+<text x="60.0" y="144.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="end">K</text>
+<text x="60.0" y="194.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="end">V</text>
+<text x="230.0" y="231.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#165c3b" text-anchor="middle">prompt (prefill)</text>
+<text x="405.0" y="231.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#1d3f8f" text-anchor="middle">new</text>
+<text x="505.0" y="231.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">preallocated, max_seq_len</text>
+<rect x="620.0" y="100.0" width="330.0" height="152.0" rx="8" fill="#fbfbfd" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="632.0" y="124.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"># decode step at position p</text>
+<text x="632.0" y="140.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">q, k, v = proj(x)        # T = 1</text>
+<text x="632.0" y="157.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">K[:, p] = k;  V[:, p] = v</text>
+<text x="632.0" y="173.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">attn over K[:, :p+1]</text>
+<text x="632.0" y="190.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"></text>
+<text x="632.0" y="206.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">fixed-size cache + a mask</text>
+<rect x="624.0" y="211.0" width="322.0" height="16.5" rx="3" fill="#e8effc" stroke="#e8effc" stroke-width="0" opacity="1"/>
+<text x="632.0" y="223.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">→ same shapes every step</text>
+<rect x="624.0" y="227.5" width="322.0" height="16.5" rx="3" fill="#e8effc" stroke="#e8effc" stroke-width="0" opacity="1"/>
+<text x="632.0" y="239.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">→ the JIT can replay it</text>
+<text x="490.0" y="304.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">growing the cache with cat() changes shapes every step, so every step recompiles: fine for tests, fatal for speed</text>
+</svg>

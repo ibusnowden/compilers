@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" width="980" height="300">
+<rect x="0.5" y="0.5" width="979" height="299" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">pad is a guarded load</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">pad [1 2 3] [[1 2]]  →  [0 1 2 3 0 0]</text>
+<rect x="70.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#f1f3f6" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="93.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">0</text>
+<rect x="116.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#e5f5ec" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="139.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">1</text>
+<rect x="162.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#e5f5ec" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="185.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">2</text>
+<rect x="208.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#e5f5ec" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="231.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">3</text>
+<rect x="254.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#f1f3f6" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="277.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">0</text>
+<rect x="300.0" y="120.0" width="46.0" height="46.0" rx="0" fill="#f1f3f6" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="323.0" y="147.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">0</text>
+<text x="93.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=0</text>
+<text x="139.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=1</text>
+<text x="185.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=2</text>
+<text x="231.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=3</text>
+<text x="277.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=4</text>
+<text x="323.0" y="188.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">i=5</text>
+<rect x="420.0" y="100.0" width="520.0" height="132.0" rx="8" fill="#fbfbfd" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="432.0" y="121.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">rendered</text>
+<text x="432.0" y="147.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">valid = (1 &lt;= i) &amp; (i &lt; 4)</text>
+<rect x="424.0" y="152.0" width="512.0" height="18.0" rx="3" fill="#e5f5ec" stroke="#e5f5ec" stroke-width="0" opacity="1"/>
+<text x="432.0" y="165.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">out[i] = valid ? buf[i - 1] : 0</text>
+<text x="432.0" y="183.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"></text>
+<text x="432.0" y="201.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"># never load buf[-1]: a gated load, or</text>
+<text x="432.0" y="219.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"># clamp the index:  buf[max(0, min(i-1, 2))]</text>
+<text x="490.0" y="274.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">the index i−1 has bounds [−1, 4]: week-2 bounds checking only accepts it under the gate</text>
+</svg>

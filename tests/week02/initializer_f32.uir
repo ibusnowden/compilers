@@ -1,0 +1,2 @@
+%b = buffer f32 [0.5 1.5 -2.0]
+%t = assert (add (load %b 0) (load %b 1)) 2.0

@@ -1,0 +1,5 @@
+%x = var 0 3
+%y = var 0 3
+%p1 = prove (cmplt (add (mul %x 4) %y) 16)
+%p2 = prove (cmpeq (add %x %y) (add %y %x))
+%p3 = prove (cmpeq (add (mul %x 2) (add %y %x)) (add %y (mul %x 3)))

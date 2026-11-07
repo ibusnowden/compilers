@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" width="980" height="380">
+<rect x="0.5" y="0.5" width="979" height="379" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="m2e9e6a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e9e6a"/></marker></defs>
+<defs><marker id="md64545" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d64545"/></marker></defs>
+<defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Linearize: graph → ordered list</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">b1 = store b0 0 1;  t = load b1 0;  b2 = store b1 0 2;  assert t 1</text>
+<rect x="65.0" y="295.0" width="110.0" height="30.0" rx="15.0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="120.0" y="314.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">BUFFER b0</text>
+<rect x="70.0" y="220.0" width="100.0" height="30.0" rx="15.0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="120.0" y="239.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">STORE b1</text>
+<rect x="15.0" y="145.0" width="90.0" height="30.0" rx="15.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="60.0" y="164.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">LOAD b1</text>
+<rect x="140.0" y="145.0" width="100.0" height="30.0" rx="15.0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="190.0" y="164.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">STORE b2</text>
+<rect x="75.0" y="75.0" width="90.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="120.0" y="94.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">ASSERT</text>
+<line x1="120.0" y1="295.0" x2="120.0" y2="251.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<line x1="110.0" y1="220.0" x2="70.0" y2="176.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<line x1="135.0" y1="220.0" x2="180.0" y2="176.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<line x1="65.0" y1="145.0" x2="105.0" y2="106.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<line x1="185.0" y1="145.0" x2="140.0" y2="106.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<line x1="105.0" y1="160.0" x2="140.0" y2="160.0" stroke="#d64545" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#md64545)"/>
+<text x="122.0" y="143.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="middle">WAR</text>
+<line x1="265.0" y1="200.0" x2="340.0" y2="200.0" stroke="#2e9e6a" stroke-width="1.6" marker-end="url(#m2e9e6a)"/>
+<text x="302.5" y="194.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">toposort</text>
+<rect x="350.0" y="100.0" width="330.0" height="132.0" rx="8" fill="#fbfbfd" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="362.0" y="121.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">linear program</text>
+<text x="362.0" y="147.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">0  b0 = BUFFER i32 2</text>
+<text x="362.0" y="165.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">1  STORE b0[0] ← 1      # b1</text>
+<text x="362.0" y="183.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">2  t = LOAD b0[0]       # reads b1</text>
+<text x="362.0" y="201.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">3  STORE b0[0] ← 2      # b2</text>
+<text x="362.0" y="219.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">4  ASSERT t == 1</text>
+<rect x="700.0" y="100.0" width="250.0" height="132.0" rx="8" fill="#fbfbfd" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="712.0" y="121.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">interpreter state</text>
+<text x="712.0" y="147.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">mem = [0, 0]</text>
+<text x="712.0" y="165.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">mem = [1, 0]</text>
+<text x="712.0" y="183.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">t = 1</text>
+<text x="712.0" y="201.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">mem = [2, 0]</text>
+<text x="712.0" y="219.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">1 == 1  ✓</text>
+<text x="490.0" y="304.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">the red edge is not data: it says “read b1 before b1 is overwritten”</text>
+</svg>

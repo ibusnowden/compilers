@@ -1,0 +1,4 @@
+# expect: compile-error
+%b = buffer i32 8
+%i = range 8
+%t = assert (load %b (add %i 1)) 0

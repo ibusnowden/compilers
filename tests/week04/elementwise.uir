@@ -1,0 +1,4 @@
+# max-kernels: 1
+%a = [1 2 3 4]
+%b = [10 20 30 40]
+%t = assert (add (mul %a %b) %a) [11 42 93 164]

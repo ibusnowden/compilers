@@ -1,0 +1,23 @@
+# Keeps the course materials honest: every public test must pass on the reference tools.
+# (It does NOT grade a compiler. Students run tools/grade.py locally.)
+name: course-materials
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install numpy pytest hypothesis pyflakes
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: .uir tests pass the oracle (weeks 1-5)
+        run: UC_ORACLE=1 pytest tests -q
+      - name: prove/bounds tests follow from the required rules (weeks 1-3)
+        run: python solutions/check_provable.py tests/week01/*.uir tests/week02/*.uir tests/week03/*.uir
+      - name: Tensor-API tests pass on the torch shim with the reference models (weeks 6-11)
+        run: UC_TORCH_SHIM=1 UC_MODELS_DIR=$PWD/solutions/uc/models pytest tests/week06 tests/week07 tests/week08 tests/week09 tests/week10 tests/week11 -q -m "not slow"
+      - name: figures regenerate
+        run: python docs/figures/make_figures.py
+      - name: lint
+        run: python -m pyflakes $(git ls-files '*.py' | grep -v __init__.py)

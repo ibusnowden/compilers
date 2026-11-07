@@ -1,0 +1,3 @@
+# expect: compile-error
+# no implicit promotion
+%x = add 1 2.0

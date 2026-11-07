@@ -1,0 +1,7 @@
+# big enough that an interpreter feels slow and C doesn't
+%o = buffer i32 1
+%i = range 400
+%j = range 400
+%s = store %o 0 (add (load %o 0) (mod (add %i %j) 7))
+%o1 = end %s %i %j
+%t = assert (load %o1 0) 479997

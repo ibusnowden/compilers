@@ -1,0 +1,4 @@
+# week: 2
+%b = buffer i32 4
+%b1 = store %b 2 7
+%t = assert (load %b1 2) 7

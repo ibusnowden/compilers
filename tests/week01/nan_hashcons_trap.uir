@@ -1,0 +1,4 @@
+# Both operands are the SAME hash-consed node. `cmpeq x x -> true` is unsound for floats.
+%nan = div 0.0 0.0
+%same = cmpeq %nan %nan
+%t = assert %same false

@@ -1,0 +1,3 @@
+# expect: compile-error
+# week-4 expand takes a scalar
+%t = expand [1 2] 4

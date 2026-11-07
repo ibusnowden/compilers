@@ -1,0 +1,2 @@
+# pop=0 reduces nothing
+%t = assert (reduce [1 2 3] op=add pop=0) [1 2 3]

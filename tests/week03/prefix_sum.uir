@@ -1,0 +1,10 @@
+# iterations depend on each other: loop order matters
+%a = buffer i32 [1 2 3 4 5]
+%p = buffer i32 5
+%i = range 5
+%prev = where (cmplt %i 1) 0 (load %p (max (sub %i 1) 0))
+%s = store %p %i (add %prev (load %a %i))
+%p1 = end %s %i
+%t1 = assert (load %p1 0) 1
+%t2 = assert (load %p1 4) 15
+%t3 = assert (load %p1 2) 6

@@ -1,0 +1,4 @@
+# max-kernels: 1
+%t1 = assert (reduce [3 -7 9 2] op=max pop=1) 9
+%t2 = assert (reduce [3 -7 9 2] op=min pop=1) -7
+%t3 = assert (reduce [1 2 3 4 5] op=mul pop=1) 120

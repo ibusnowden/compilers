@@ -1,0 +1,4 @@
+# expect: compile-error
+# every statement must be well-typed, even if it is never used
+%ok = assert (add 1 2) 3
+%bad = mul true 2

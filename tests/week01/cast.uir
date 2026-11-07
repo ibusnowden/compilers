@@ -1,0 +1,9 @@
+%t1 = assert (cast 3.7 i32) 3
+%t2 = assert (cast -3.7 i32) -3
+%t3 = assert (cast 7 f32) 7.0
+%t4 = assert (cast true i32) 1
+%t5 = assert (cast 0 bool) false
+%t6 = assert (cast -5 bool) true
+%t7 = assert (cast 0.0 bool) false
+%t8 = assert (cast false f32) 0.0
+%t9 = assert (cast 16777217 f32) 16777216.0

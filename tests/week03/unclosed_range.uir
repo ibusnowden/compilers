@@ -1,0 +1,6 @@
+# expect: compile-error
+# a store inside a loop that was never ended can't be used outside it
+%b = buffer i32 4
+%i = range 4
+%s = store %b %i 1
+%t = assert (load %s 0) 1

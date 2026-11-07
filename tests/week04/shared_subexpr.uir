@@ -1,0 +1,6 @@
+# %sq is used twice; computing it twice in one kernel is fine, so is materializing it
+# max-kernels: 2
+%x = [1 2 3]
+%sq = mul %x %x
+%t1 = assert (add %sq %sq) [2 8 18]
+%t2 = assert (reduce %sq op=add pop=1) 14

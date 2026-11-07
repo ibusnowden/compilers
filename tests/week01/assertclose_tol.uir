@@ -1,0 +1,2 @@
+%t1 = assertclose 1.0 1.001 atol=0.01
+%t2 = assertclose 100.0 101.0 rtol=0.02

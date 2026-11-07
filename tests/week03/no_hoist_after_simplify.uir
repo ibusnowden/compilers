@@ -1,0 +1,7 @@
+# (mul %i 0) simplifies to 0, so the stored value no longer mentions %i.
+# The store must STILL run once per iteration (it is on the chain closed by `end`).
+%o = buffer i32 1
+%i = range 5
+%s = store %o 0 (add (load %o 0) (add 1 (mul %i 0)))
+%o1 = end %s %i
+%t = assert (load %o1 0) 5

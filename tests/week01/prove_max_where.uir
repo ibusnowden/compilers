@@ -1,0 +1,5 @@
+%x = var 0 10
+%p1 = prove (cmpeq (max %x 0) %x)
+%p2 = prove (cmpeq (min %x 10) %x)
+%p3 = prove (cmpeq (where (cmplt %x 0) 5 7) 7)
+%p4 = prove (cmpeq (where (cmplt %x 20) %x 0) %x)

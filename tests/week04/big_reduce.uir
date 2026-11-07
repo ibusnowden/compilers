@@ -1,0 +1,4 @@
+# 4096 elements.  An exact integer sum.
+# max-kernels: 1
+%x = cast (expand 3 4096) f32
+%t = assert (reduce %x op=add pop=1) 12288.0

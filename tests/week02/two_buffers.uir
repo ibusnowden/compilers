@@ -1,0 +1,7 @@
+%a = buffer i32 [1 2 3]
+%b = buffer i32 3
+%b1 = store %b 0 (mul (load %a 2) 10)
+%a1 = store %a 2 0
+%t1 = assert (load %b1 0) 30
+%t2 = assert (load %a1 2) 0
+%t3 = assert (load %a 2) 3

@@ -1,0 +1,3 @@
+# expect: assert-fail
+%b = buffer i32 [1 2 3]
+%t = assert (load %b 1) 3

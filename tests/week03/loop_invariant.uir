@@ -1,0 +1,7 @@
+# (load %k 0) * 3 does not depend on %i: it belongs OUTSIDE the loop
+%k = buffer i32 [7]
+%o = buffer i32 16
+%i = range 16
+%s = store %o %i (add %i (mul (load %k 0) 3))
+%o1 = end %s %i
+%t = assert (load %o1 15) 36

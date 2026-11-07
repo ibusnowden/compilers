@@ -1,0 +1,4 @@
+# expect: compile-error
+# x + 1 wraps when x = 2147483647, so `x < x + 1` is NOT always true
+%x = var 0 2147483647
+%p = prove (cmplt %x (add %x 1))

@@ -1,0 +1,4 @@
+# expect: compile-error
+%b = buffer i32 4
+%b1 = store %b -1 3
+%t = assert (load %b1 0) 0

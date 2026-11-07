@@ -1,0 +1,17 @@
+[project]
+name = "uc"
+version = "0.0.1"
+description = "uc: a small machine-learning compiler, built one week at a time"
+requires-python = ">=3.11"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+test = ["pytest", "hypothesis"]
+ref = ["torch"]          # only used by reference checks / benchmarks, never by uc itself
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["uc*"]

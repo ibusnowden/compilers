@@ -1,0 +1,3 @@
+# expect: assert-fail
+%t1 = assert (cmplt 1 2)
+%t2 = assert (cmplt 2 1)

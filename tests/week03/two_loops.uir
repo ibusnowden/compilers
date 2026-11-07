@@ -1,0 +1,11 @@
+# a loop whose input is the output of another loop
+%a = buffer i32 8
+%i = range 8
+%s1 = store %a %i (add %i 1)
+%a1 = end %s1 %i
+%b = buffer i32 8
+%j = range 8
+%s2 = store %b %j (mul (load %a1 (sub 7 %j)) 2)
+%b1 = end %s2 %j
+%t1 = assert (load %b1 0) 16
+%t2 = assert (load %b1 7) 2

@@ -1,0 +1,5 @@
+%x = var 0 10
+%p1 = prove (cmplt %x 11)
+%p2 = prove (cmplt -1 %x)
+%p3 = prove (cmplt (add %x 1) 12)
+%p4 = prove (not (cmplt 10 %x))

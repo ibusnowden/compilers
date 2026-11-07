@@ -1,0 +1,2 @@
+# expect: compile-error
+%x = var 5 4

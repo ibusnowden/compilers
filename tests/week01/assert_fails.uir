@@ -1,0 +1,2 @@
+# expect: assert-fail
+%t = assert (add 2 2) 5

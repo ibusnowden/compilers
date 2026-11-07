@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" width="980" height="360">
+<rect x="0.5" y="0.5" width="979" height="359" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="m2e9e6a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e9e6a"/></marker></defs>
+<defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Memory is versioned</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">store returns a NEW version; loads name the version they read</text>
+<rect x="5.0" y="110.0" width="170.0" height="44.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="90.0" y="136.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">b0 = buffer i32 4</text>
+<rect x="215.0" y="110.0" width="170.0" height="44.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="300.0" y="136.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">b1 = store b0 0 1</text>
+<line x1="175.0" y1="132.0" x2="215.0" y2="132.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="425.0" y="110.0" width="170.0" height="44.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="510.0" y="136.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">b2 = store b1 0 2</text>
+<line x1="385.0" y1="132.0" x2="425.0" y2="132.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="635.0" y="110.0" width="170.0" height="44.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="720.0" y="136.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">b3 = store b2 1 7</text>
+<line x1="595.0" y1="132.0" x2="635.0" y2="132.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="220.0" y="215.0" width="160.0" height="36.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="300.0" y="237.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">load b1 0  → 1</text>
+<line x1="300.0" y1="210.0" x2="300.0" y2="156.0" stroke="#2e9e6a" stroke-width="1.6" marker-end="url(#m2e9e6a)"/>
+<rect x="430.0" y="215.0" width="160.0" height="36.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="510.0" y="237.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">load b2 0  → 2</text>
+<line x1="510.0" y1="210.0" x2="510.0" y2="156.0" stroke="#2e9e6a" stroke-width="1.6" marker-end="url(#m2e9e6a)"/>
+<rect x="10.0" y="215.0" width="160.0" height="36.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="90.0" y="237.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">load b0 0  → 0</text>
+<line x1="90.0" y1="210.0" x2="90.0" y2="156.0" stroke="#2e9e6a" stroke-width="1.6" marker-end="url(#m2e9e6a)"/>
+<rect x="60.0" y="290.0" width="860.0" height="50.0" rx="8" fill="#fbfbfd" stroke="#e3e6eb" stroke-width="1.5" opacity="1"/>
+<text x="490.0" y="309.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1f2430" text-anchor="middle">Physically there is ONE allocation, mutated in place.</text>
+<text x="490.0" y="330.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">So every load of version v must run before the store that overwrites v (write-after-read).</text>
+</svg>

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/
+benchmarks/out/
+*.so
+*.part
+docs/**/*.png
+REPORT.md
+
+# Keep solutions local only
+solutions/

@@ -1,0 +1,4 @@
+%b = buffer i32 [5 6 7 8]
+%t1 = assert (load %b 0) 5
+%t2 = assert (load %b 3) 8
+%t3 = assert (add (load %b 1) (load %b 2)) 13

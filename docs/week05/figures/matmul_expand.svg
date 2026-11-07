@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" width="980" height="420">
+<rect x="0.5" y="0.5" width="979" height="419" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="me08a2c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e08a2c"/></marker></defs>
+<defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Matmul from movement ops</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">A (M,K) → reshape (M,1,K) → expand (M,N,K);   Bᵀ (N,K) → reshape (1,N,K) → expand (M,N,K);   multiply; reduce pop=1</text>
+<rect x="50.0" y="130.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<rect x="76.0" y="130.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<rect x="102.0" y="130.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<rect x="50.0" y="156.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<rect x="76.0" y="156.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<rect x="102.0" y="156.0" width="26.0" height="26.0" rx="0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1" opacity="1"/>
+<text x="89.0" y="122.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#1d3f8f" text-anchor="middle">A (2,3)</text>
+<text x="89.0" y="201.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">rows i, cols k</text>
+<rect x="50.0" y="270.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="76.0" y="270.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="102.0" y="270.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="50.0" y="296.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="76.0" y="296.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<rect x="102.0" y="296.0" width="26.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1" opacity="1"/>
+<text x="89.0" y="262.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#165c3b" text-anchor="middle">Bᵀ (2,3)</text>
+<text x="89.0" y="341.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">rows j, cols k</text>
+<line x1="150.0" y1="155.0" x2="220.0" y2="175.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<text x="185.0" y="158.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">expand j</text>
+<line x1="150.0" y1="295.0" x2="220.0" y2="255.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<text x="185.0" y="290.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">expand i</text>
+<rect x="250.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="276.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="302.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<text x="289.0" y="193.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">(i=0, j=0)</text>
+<rect x="370.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="396.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="422.0" y="150.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<text x="409.0" y="193.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">(i=0, j=1)</text>
+<rect x="250.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="276.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="302.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<text x="289.0" y="283.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">(i=1, j=0)</text>
+<rect x="370.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="396.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<rect x="422.0" y="240.0" width="26.0" height="26.0" rx="0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1" opacity="1"/>
+<text x="409.0" y="283.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">(i=1, j=1)</text>
+<text x="370.0" y="132.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="middle">a · b   shape (2, 2, 3)</text>
+<line x1="500.0" y1="210.0" x2="570.0" y2="210.0" stroke="#e08a2c" stroke-width="1.6" marker-end="url(#me08a2c)"/>
+<text x="535.0" y="204.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">reduce pop=1</text>
+<rect x="590.0" y="175.0" width="36.0" height="36.0" rx="0" fill="#fdf0e1" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="608.0" y="196.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">Σk</text>
+<rect x="626.0" y="175.0" width="36.0" height="36.0" rx="0" fill="#fdf0e1" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="644.0" y="196.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">Σk</text>
+<rect x="590.0" y="211.0" width="36.0" height="36.0" rx="0" fill="#fdf0e1" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="608.0" y="232.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">Σk</text>
+<rect x="626.0" y="211.0" width="36.0" height="36.0" rx="0" fill="#fdf0e1" stroke="#b8c0cc" stroke-width="1" opacity="1"/>
+<text x="644.0" y="232.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="middle">Σk</text>
+<text x="626.0" y="164.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="middle">C (2, 2)</text>
+<rect x="700.0" y="120.0" width="260.0" height="157.5" rx="8" fill="#fbfbfd" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="712.0" y="141.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">after rangeify: 1 kernel</text>
+<text x="712.0" y="166.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">for i in range(2):</text>
+<text x="712.0" y="182.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  for j in range(2):</text>
+<text x="712.0" y="199.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">    acc = 0</text>
+<text x="712.0" y="215.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">    for k in range(3):</text>
+<text x="712.0" y="232.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">      acc += A[i*3+k]</text>
+<text x="712.0" y="248.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">           * B[k*2+j]</text>
+<text x="712.0" y="265.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">    C[i*2+j] = acc</text>
+<text x="490.0" y="394.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">expand costs nothing: it just ignores an index. Nothing of size M·N·K is ever allocated.</text>
+</svg>

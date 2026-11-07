@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
+<rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">The roofline</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">attainable FLOP/s = min(peak compute, bandwidth × arithmetic intensity)</text>
+<line x1="110.0" y1="380.0" x2="670.0" y2="380.0" stroke="#1f2430" stroke-width="1.5"/>
+<line x1="110.0" y1="380.0" x2="110.0" y2="100.0" stroke="#1f2430" stroke-width="1.5"/>
+<text x="110.0" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">0.01</text>
+<text x="203.3" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">0.1</text>
+<text x="296.7" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">1</text>
+<text x="390.0" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">10</text>
+<text x="483.3" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">100</text>
+<text x="576.7" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">1000</text>
+<text x="670.0" y="399.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">10000</text>
+<text x="102.0" y="383.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">1G</text>
+<text x="102.0" y="336.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">10G</text>
+<text x="102.0" y="290.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">100G</text>
+<text x="102.0" y="243.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">1T</text>
+<text x="102.0" y="196.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">10T</text>
+<text x="102.0" y="150.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">100T</text>
+<text x="102.0" y="103.5" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">1P</text>
+<text x="390.0" y="422.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">arithmetic intensity (FLOP per byte of DRAM traffic)</text>
+<line x1="110.0" y1="308.8" x2="527.2" y2="100.2" stroke="#2a9d9d" stroke-width="2.2"/>
+<line x1="527.2" y1="100.2" x2="670.0" y2="100.2" stroke="#2a9d9d" stroke-width="2.2"/>
+<text x="666.0" y="93.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#2a9d9d" text-anchor="end">bf16 tensor cores ≈ 989 TFLOP/s</text>
+<line x1="110.0" y1="308.8" x2="418.1" y2="154.8" stroke="#e08a2c" stroke-width="2.2"/>
+<line x1="418.1" y1="154.8" x2="670.0" y2="154.8" stroke="#e08a2c" stroke-width="2.2"/>
+<text x="666.0" y="171.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#e08a2c" text-anchor="end">fp32 CUDA cores ≈ 67 TFLOP/s</text>
+<text x="117.4" y="183.0" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">diagonal: HBM3 bandwidth ≈ 3.35 TB/s</text>
+<circle cx="195.94308370222166" cy="269.15348395383603" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
+<text x="204.9" y="275.7" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">a + b  (f32)</text>
+<circle cx="275.9607833691401" cy="230.3733179274198" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
+<text x="285.0" y="236.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">softmax</text>
+<circle cx="589.2790474618323" cy="112.34058088240027" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
+<text x="580.3" y="118.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="end">gemm 4096 bf16</text>
+<circle cx="511.4294662619716" cy="124.29992523111201" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
+<text x="502.4" y="130.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="end">flash attention</text>
+<rect x="700.0" y="110.0" width="260.0" height="174.0" rx="8" fill="#fbfbfd" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="712.0" y="131.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">reading it</text>
+<text x="712.0" y="156.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">memory-bound: left of the ridge</text>
+<text x="712.0" y="172.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  → fuse, don&#x27;t move bytes</text>
+<text x="712.0" y="189.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"></text>
+<text x="712.0" y="205.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">compute-bound: right of it</text>
+<text x="712.0" y="222.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  → tile, use tensor cores</text>
+<text x="712.0" y="238.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"></text>
+<text x="712.0" y="255.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">ridge = peak / bandwidth</text>
+<text x="712.0" y="271.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  ≈ 295 FLOP/B (bf16 TC)</text>
+</svg>

@@ -1,0 +1,7 @@
+# constant folding must round to f32 after EVERY op (Python floats are f64!)
+%big = 16777216.0
+%t1 = assert (add %big 1.0) %big
+%t2 = assert (sub (add %big 1.0) %big) 0.0
+%t3 = assertclose (add 0.1 0.2) 0.3
+%t4 = assert (cmpeq (add 0.1 0.2) 0.3) true   # true in f32, false in f64!
+%t5 = assert (cmpeq (add 0.1 0.2) 0.30000001192092896) true

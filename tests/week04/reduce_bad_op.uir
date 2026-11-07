@@ -1,0 +1,2 @@
+# expect: compile-error
+%t = reduce [1 2 3] op=sub pop=1

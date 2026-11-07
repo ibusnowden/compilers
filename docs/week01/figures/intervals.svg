@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400">
+<rect x="0.5" y="0.5" width="979" height="399" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Bounds flow up the graph</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">x ∈ [0, 100], y ∈ [0, 3]:   (4x + y) / 4   simplifies to   x</text>
+<rect x="150.0" y="315.0" width="40.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="170.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">x</text>
+<rect x="310.0" y="315.0" width="40.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="330.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">y</text>
+<rect x="62.0" y="315.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="80.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">4</text>
+<rect x="103.0" y="235.0" width="44.0" height="30.0" rx="15.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="125.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">MUL</text>
+<rect x="208.0" y="160.0" width="44.0" height="30.0" rx="15.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="230.0" y="179.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">ADD</text>
+<rect x="308.0" y="85.0" width="44.0" height="30.0" rx="15.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="330.0" y="104.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">DIV</text>
+<rect x="412.0" y="160.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="430.0" y="179.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">4</text>
+<line x1="125.0" y1="265.0" x2="80.0" y2="315.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="125.0" y1="265.0" x2="170.0" y2="315.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="230.0" y1="190.0" x2="125.0" y2="235.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="230.0" y1="190.0" x2="330.0" y2="315.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="330.0" y1="115.0" x2="230.0" y2="160.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="330.0" y1="115.0" x2="430.0" y2="160.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<text x="196.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 100]</text>
+<text x="356.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 3]</text>
+<text x="150.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 400]</text>
+<text x="255.0" y="179.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 403]</text>
+<text x="355.0" y="104.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#8c1f1f" text-anchor="start">?</text>
+<rect x="520.0" y="92.0" width="430.0" height="204.0" rx="8" fill="#fbfbfd" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="532.0" y="113.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">why it is allowed</text>
+<text x="532.0" y="139.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">rule 5:  e = a·c + b,  c = 4</text>
+<text x="532.0" y="157.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  a = x,   b = y</text>
+<text x="532.0" y="175.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  vmin(e) = 0 ≥ 0  ✓   vmin(b) = 0 ≥ 0  ✓</text>
+<text x="532.0" y="193.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  e cannot overflow:  403 &lt; 2³¹  ✓</text>
+<rect x="524.0" y="198.0" width="422.0" height="18.0" rx="3" fill="#efeafa" stroke="#efeafa" stroke-width="0" opacity="1"/>
+<text x="532.0" y="211.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  e / 4  →  x + y / 4</text>
+<text x="532.0" y="229.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start"></text>
+<text x="532.0" y="247.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">interval rule:  y ∈ [0, 3],  3 &lt; 4</text>
+<text x="532.0" y="265.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  y / 4  →  0</text>
+<rect x="524.0" y="270.0" width="422.0" height="18.0" rx="3" fill="#efeafa" stroke="#efeafa" stroke-width="0" opacity="1"/>
+<text x="532.0" y="283.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  x + 0  →  x</text>
+<text x="735.0" y="368.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">if x could be negative, truncating division breaks rule 5: x = −1 gives 0, not −1</text>
+</svg>

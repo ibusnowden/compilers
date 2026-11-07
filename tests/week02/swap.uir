@@ -1,0 +1,7 @@
+%b0 = buffer i32 [7 9]
+%a = load %b0 0
+%c = load %b0 1
+%b1 = store %b0 0 %c
+%b2 = store %b1 1 %a
+%t1 = assert (load %b2 0) 9
+%t2 = assert (load %b2 1) 7

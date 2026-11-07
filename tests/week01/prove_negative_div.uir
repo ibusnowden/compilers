@@ -1,0 +1,4 @@
+# expect: compile-error
+# with truncating division, (4x+3)/4 != x when x < 0 (e.g. x = -1 gives 0)
+%x = var -5 5
+%p = prove (cmpeq (div (add (mul %x 4) 3) 4) %x)

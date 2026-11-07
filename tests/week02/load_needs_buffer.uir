@@ -1,0 +1,2 @@
+# expect: compile-error
+%t = assert (load 3 0) 0

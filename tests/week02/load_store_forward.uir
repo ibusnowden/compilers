@@ -1,0 +1,5 @@
+# store-to-load forwarding is a legal optimization, but not required
+%b0 = buffer f32 2
+%b1 = store %b0 1 2.5
+%x = mul (load %b1 1) (load %b1 1)
+%t = assert %x 6.25

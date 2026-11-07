@@ -1,0 +1,4 @@
+# max-kernels: 1
+%x = [-2 -1 0 1 2]
+%relu = where (cmplt %x (expand 0 5)) (expand 0 5) %x
+%t = assert %relu [0 0 0 1 2]

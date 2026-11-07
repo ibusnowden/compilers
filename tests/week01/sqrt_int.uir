@@ -1,0 +1,2 @@
+# expect: compile-error
+%t = assert (sqrt 4) 2

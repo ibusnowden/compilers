@@ -1,0 +1,4 @@
+# contiguous forces a buffer: two kernels, and the result is unchanged
+# max-kernels: 2
+%a = contiguous (mul [1 2 3] [4 5 6])
+%t = assert (reduce %a op=add pop=1) 32

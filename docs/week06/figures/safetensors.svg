@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 280" width="980" height="280">
+<rect x="0.5" y="0.5" width="979" height="279" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">A safetensors file</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">trivial to parse, and mmap-able: the tensor bytes need no copying</text>
+<rect x="40.0" y="110.0" width="120.0" height="60.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="100.0" y="136.6" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="13" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">u64 LE</text>
+<text x="100.0" y="153.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">header size N</text>
+<rect x="160.0" y="110.0" width="360.0" height="60.0" rx="8" fill="#fdf7dc" stroke="#c9a227" stroke-width="1.5" opacity="1"/>
+<text x="340.0" y="135.8" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="500" fill="#6d5608" text-anchor="middle">{&quot;h.0.attn.c_attn.weight&quot;: {&quot;dtype&quot;:&quot;F32&quot;,</text>
+<text x="340.0" y="153.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">&quot;shape&quot;:[768,2304], &quot;data_offsets&quot;:[0, 7077888]}, ...}</text>
+<rect x="520.0" y="110.0" width="140.0" height="60.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="590.0" y="136.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">tensor 0</text>
+<text x="590.0" y="153.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">raw bytes</text>
+<rect x="660.0" y="110.0" width="140.0" height="60.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="730.0" y="136.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">tensor 1</text>
+<text x="730.0" y="153.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">raw bytes</text>
+<rect x="800.0" y="110.0" width="140.0" height="60.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="870.0" y="144.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="500" fill="#165c3b" text-anchor="middle">…</text>
+<text x="100.0" y="198.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">8 bytes</text>
+<text x="340.0" y="198.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">N bytes of JSON</text>
+<text x="730.0" y="198.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">offsets are relative to 8 + N</text>
+<text x="490.0" y="244.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">bf16 has no numpy dtype: load the bits as u16, and let your compiler cast (x as u32) &lt;&lt; 16 to f32</text>
+</svg>

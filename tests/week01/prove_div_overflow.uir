@@ -1,0 +1,4 @@
+# expect: compile-error
+# x*2 overflows for x >= 2^30, so (x*2)/2 == x is not a theorem here
+%x = var 0 1073741830
+%p = prove (cmpeq (div (mul %x 2) 2) %x)

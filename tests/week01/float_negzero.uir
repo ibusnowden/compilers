@@ -1,0 +1,6 @@
+# 0.0 == -0.0 in Python, and hash(0.0) == hash(-0.0).
+# A hash-consing table keyed on the raw float will merge these two constants.
+%pz = 0.0
+%nz = -0.0
+%t1 = assert (div 1.0 %nz) (neg (div 1.0 %pz))
+%t2 = assert (cmpeq %pz %nz) true

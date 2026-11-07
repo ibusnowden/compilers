@@ -1,0 +1,8 @@
+# max-kernels: 3
+%x = [1.0 2.0 3.0 4.0]
+%m = reduce %x op=max pop=1
+%e = exp2 (sub %x (expand %m 4))
+%s = reduce %e op=add pop=1
+%y = div %e (expand %s 4)
+%t1 = assertclose %y [0.06666667 0.13333334 0.26666668 0.53333336]
+%t2 = assertclose (reduce %y op=add pop=1) 1.0

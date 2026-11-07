@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400">
+<rect x="0.5" y="0.5" width="979" height="399" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<defs><marker id="m7b8494" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b8494"/></marker></defs>
+<text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Coalescing: a warp&#x27;s loads should hit consecutive addresses</text>
+<text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">threadIdx.x should index the contiguous (stride-1) axis   (8 of a warp&#x27;s 32 threads shown)</text>
+<text x="40.0" y="98.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#165c3b" text-anchor="start">coalesced: thread t reads a[t]</text>
+<rect x="60.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="62.0" y="207.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">0 B</text>
+<rect x="94.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="128.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="162.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="196.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="230.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="264.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="298.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#e5f5ec" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="332.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="334.0" y="207.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">32 B</text>
+<rect x="366.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="400.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="434.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="468.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="502.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="536.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="570.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="604.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="606.0" y="207.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">64 B</text>
+<rect x="638.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="672.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="706.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="740.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="774.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="808.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="842.0" y="166.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<circle cx="77" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="77.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t0</text>
+<line x1="77.0" y1="136.0" x2="77.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="111" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="111.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t1</text>
+<line x1="111.0" y1="136.0" x2="111.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="145" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="145.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t2</text>
+<line x1="145.0" y1="136.0" x2="145.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="179" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="179.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t3</text>
+<line x1="179.0" y1="136.0" x2="179.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="213" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="213.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t4</text>
+<line x1="213.0" y1="136.0" x2="213.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="247" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="247.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t5</text>
+<line x1="247.0" y1="136.0" x2="247.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="281" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="281.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t6</text>
+<line x1="281.0" y1="136.0" x2="281.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="315" cy="124" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="315.0" y="127.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t7</text>
+<line x1="315.0" y1="136.0" x2="315.0" y2="165.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<text x="940.0" y="127.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">8 × 4 B = one 32 B sector</text>
+<text x="40.0" y="238.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="start">strided: thread t reads a[3t]  (threadIdx.x bound to the wrong axis)</text>
+<rect x="60.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="62.0" y="347.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">0 B</text>
+<rect x="94.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="128.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="162.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="196.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="230.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="264.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="298.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="332.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="334.0" y="347.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">32 B</text>
+<rect x="366.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="400.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="434.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="468.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="502.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="536.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="570.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="604.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<text x="606.0" y="347.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">64 B</text>
+<rect x="638.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="672.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="706.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="740.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="774.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fbe9e9" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="808.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<rect x="842.0" y="306.0" width="34.0" height="26.0" rx="0" fill="#fafbfc" stroke="#c9ced6" stroke-width="1" opacity="1"/>
+<circle cx="77" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="77.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t0</text>
+<line x1="77.0" y1="276.0" x2="77.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="111" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="111.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t1</text>
+<line x1="111.0" y1="276.0" x2="179.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="145" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="145.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t2</text>
+<line x1="145.0" y1="276.0" x2="281.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="179" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="179.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t3</text>
+<line x1="179.0" y1="276.0" x2="383.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="213" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="213.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t4</text>
+<line x1="213.0" y1="276.0" x2="485.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="247" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="247.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t5</text>
+<line x1="247.0" y1="276.0" x2="587.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="281" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="281.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t6</text>
+<line x1="281.0" y1="276.0" x2="689.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<circle cx="315" cy="264" r="11" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5"/>
+<text x="315.0" y="267.1" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">t7</text>
+<line x1="315.0" y1="276.0" x2="791.0" y2="305.0" stroke="#7b8494" stroke-width="1.2" marker-end="url(#m7b8494)"/>
+<text x="940.0" y="267.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="end">3 sectors fetched, ⅔ wasted</text>
+<text x="490.0" y="384.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">fix by choosing the axis binding (week 8) or by staging the tile through shared memory (week 9)</text>
+</svg>

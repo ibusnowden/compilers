@@ -1,0 +1,9 @@
+%inf = div 1.0 0.0
+%nan = div 0.0 0.0
+%t1 = assert (cmplt 1e30 %inf)
+%t2 = assert (neg %inf) (div -1.0 0.0)
+%t3 = assert (cmpeq %nan %nan) false
+%t4 = assert (cmpne %nan %nan) true
+%t5 = assert (cmplt %nan 1.0) false
+%t6 = assert (cmplt 1.0 %nan) false
+%t7 = assert (sub %inf %inf) %nan

@@ -1,0 +1,6 @@
+%x = var -100 100
+%p1 = prove (cmpeq (add (mul %x 2) (mul %x 3)) (mul %x 5))
+%p2 = prove (cmpeq (add %x %x) (mul %x 2))
+%p3 = prove (cmpeq (sub %x %x) 0)
+%p4 = prove (cmpeq (add (add %x 3) 4) (add %x 7))
+%p5 = prove (cmpeq (add 3 %x) (add %x 3))

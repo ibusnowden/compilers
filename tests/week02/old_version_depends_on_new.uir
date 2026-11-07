@@ -1,0 +1,7 @@
+# the index of a load of the OLD version depends on the NEW version
+%b0 = buffer i32 [3 1 4 1]
+%b1 = store %b0 0 2
+%i = max 0 (min (load %b1 0) 3)   # clamp: a loaded value has no useful bounds
+%old = load %b0 %i
+%t1 = assert %old 4
+%t2 = assert (load %b1 2) 4
