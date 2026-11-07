@@ -81,6 +81,24 @@ without a working compiler:
 
 If a test fails under these tools, the test is wrong. If it passes under them and fails on `uc`, your compiler is wrong.
 
+## Note: extending `uc` after the course
+
+Ways to extend it after the course:
+
+- **New backends:** Metal, ROCm/AMD, Vulkan, WebGPU, or emitting LLVM IR or MLIR instead of C source.
+- **Better optimization:** autotuning or search over schedules, equality saturation in the style of egg (it's on the week 1 reading list), and cost models.
+- **Low precision:** fp8 and int4 quantization, sparsity.
+- **A model front end:** importing ONNX or PyTorch graphs, so it can run models that weren't written with its own Tensor API.
+- **Serving features:** KV-cache paging, continuous batching, speculative decoding.
+
+Things to check first:
+
+- **License:** this repo has no LICENSE file. If you plan to publish your compiler or build something on top of the course materials, find out where the course came from and what terms it allows.
+- **Course-only parts:** the grading tools, quizzes and the `solutions/` folder only matter for the course. If you spin the compiler off as its own project, you'd probably move `compiler/uc/` and the tests into a separate repo and leave the rest behind.
+- **Hardware assumptions:** weeks 8–11 are tuned for an H100. To support other GPUs you'd need to make the backend more general.
+
+The best order is to finish the course in sequence, because each week depends on the last. Then use the final project as the first step toward your own compiler.
+
 ## Regenerating the figures
 
 `python docs/figures/make_figures.py` rewrites every SVG under `docs/` from `docs/figures/figs_*.py`.
