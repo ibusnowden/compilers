@@ -21,7 +21,7 @@ C = {  # (fill, stroke, text)
 class SVG:
   def __init__(self, w, h, title=None, subtitle=None):
     self.w, self.h, self.parts = w, h, []
-    self.top = 0
+    self.title, self.top = title, 0
     if title:
       self.text(24, 34, title, size=19, weight=700)
       self.top = 44
@@ -77,6 +77,12 @@ class SVG:
     ds = f' stroke-dasharray="{dash}"' if dash else ""
     mid = self._marker(color) if head else ""
     self.raw(f'<path d="M{x1:.1f},{y1:.1f} Q{cx:.1f},{cy:.1f} {x2:.1f},{y2:.1f}" fill="none" stroke="{color}" stroke-width="{sw}"{ds}{mid}/>')
+  def arc(self, cx, cy, r, a1, a2, color="#5b6474", sw=1.6, head=True):
+    """a clockwise arc of the circle (cx, cy, r) from angle a1 to a2 (radians, 0 = east, clockwise on screen)"""
+    import math
+    x1, y1, x2, y2 = cx + r * math.cos(a1), cy + r * math.sin(a1), cx + r * math.cos(a2), cy + r * math.sin(a2)
+    mid = self._marker(color) if head else ""
+    self.raw(f'<path d="M{x1:.1f},{y1:.1f} A{r},{r} 0 0 1 {x2:.1f},{y2:.1f}" fill="none" stroke="{color}" stroke-width="{sw}"{mid}/>')
   def poly(self, pts, fill, stroke=LINE, sw=1.2, opacity=1):
     p = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
     self.raw(f'<polygon points="{p}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}" opacity="{opacity}"/>')
@@ -119,6 +125,7 @@ class SVG:
 
   def save(self, path):
     body = "\n".join(self.parts)
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {self.w} {self.h}" width="{self.w}" height="{self.h}">\n'
+    title = f'<title>{escape(self.title)}</title>\n' if self.title else ""    # read by screen readers, shown on hover
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {self.w} {self.h}" width="{self.w}" height="{self.h}" role="img">\n{title}'
            f'<rect x="0.5" y="0.5" width="{self.w - 1}" height="{self.h - 1}" rx="14" fill="{BG}" stroke="#e3e6eb"/>\n{body}\n</svg>\n')
     with open(path, "w") as f: f.write(svg)

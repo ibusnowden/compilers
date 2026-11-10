@@ -2,7 +2,7 @@
 """Week 11: batch-1 decode speed for Qwen2.5-1.5B on your compiler, against the memory-bandwidth bound.
   python tools/download.py qwen && python benchmarks/generate.py "The capital of France is"
 Tokenization uses the `tokenizers` package (not part of the compiler)."""
-import json, sys, time, pathlib
+import json, os, sys, time, pathlib
 import numpy as np
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "compiler")); sys.path.insert(0, str(ROOT / "tests"))
@@ -11,7 +11,7 @@ from uc.nn.state import safe_load
 from uc.models.llama import Llama
 from ref.configs import llama_config_from_hf
 
-BW = float(__import__("os").environ.get("HBM_GBPS", 3350)) * 1e9     # H100 SXM HBM3. PCIe: ~2000
+BW = float(os.environ.get("HBM_GBPS", 3350)) * 1e9     # H100 SXM HBM3. PCIe: ~2000
 d = ROOT / "data" / "qwen"
 cfg = llama_config_from_hf(json.load(open(d / "config.json")))
 sd = safe_load(str(d / "model.safetensors"))                          # bf16 on disk; keep it bf16 on the GPU

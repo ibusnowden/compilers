@@ -1,6 +1,6 @@
 # Week 10 assignment — multiple GPUs and sharding
 
-**Grade:** `python tools/grade.py 10`, and `UC_VIRTUAL_GPUS=4 UC_MULTI=CUDA pytest tests/week10`.
+**Done when:** `pytest tests/week{01..10}` and `UC_VIRTUAL_GPUS=4 UC_MULTI=CUDA pytest tests/week10` pass.
 
 ## Deliverables
 

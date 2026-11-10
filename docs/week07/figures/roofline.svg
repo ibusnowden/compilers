@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440" role="img">
+<title>The roofline</title>
 <rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">The roofline</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">attainable FLOP/s = min(peak compute, bandwidth × arithmetic intensity)</text>
@@ -25,15 +26,16 @@
 <line x1="110.0" y1="308.8" x2="418.1" y2="154.8" stroke="#e08a2c" stroke-width="2.2"/>
 <line x1="418.1" y1="154.8" x2="670.0" y2="154.8" stroke="#e08a2c" stroke-width="2.2"/>
 <text x="666.0" y="171.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#e08a2c" text-anchor="end">fp32 CUDA cores ≈ 67 TFLOP/s</text>
-<text x="117.4" y="183.0" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">diagonal: HBM3 bandwidth ≈ 3.35 TB/s</text>
+<text x="117.4" y="183.0" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">slope: HBM3 bandwidth ≈ 3.35 TB/s</text>
+<text x="64.0" y="89.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">FLOP/s</text>
 <circle cx="195.94308370222166" cy="269.15348395383603" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
-<text x="204.9" y="275.7" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">a + b  (f32)</text>
+<text x="205.9" y="281.0" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">a + b  (f32)</text>
 <circle cx="275.9607833691401" cy="230.3733179274198" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
-<text x="285.0" y="236.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">softmax</text>
+<text x="286.0" y="242.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">softmax</text>
 <circle cx="589.2790474618323" cy="112.34058088240027" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
-<text x="580.3" y="118.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="end">gemm 4096 bf16</text>
-<circle cx="511.4294662619716" cy="124.29992523111201" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
-<text x="502.4" y="130.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="end">flash attention</text>
+<text x="599.3" y="120.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">gemm 4096 bf16</text>
+<circle cx="511.4294662619716" cy="132.51751732037718" r="5" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5"/>
+<text x="521.4" y="140.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="start">flash attention</text>
 <rect x="700.0" y="110.0" width="260.0" height="174.0" rx="8" fill="#fbfbfd" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
 <text x="712.0" y="131.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">reading it</text>
 <text x="712.0" y="156.1" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">memory-bound: left of the ridge</text>

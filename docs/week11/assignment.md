@@ -1,6 +1,6 @@
 # Week 11 assignment — SOTA inference and training
 
-**Grade:** `python tools/grade.py 11`, plus the two benchmark reports. There are no tests due this week, but the final project proposal is.
+**Done when:** `pytest tests/week{01..11}` passes and both benchmarks meet their bars. Writing your own tests is optional this week. The final project proposal isn't.
 
 ## Deliverables
 
@@ -10,7 +10,7 @@
 3. Inference: `python benchmarks/generate.py` prints coherent text at **≥ 50% of the bandwidth bound**.
 4. Training: `benchmarks/train_gpt2.py` matches `train_gpt2_torch.py`'s validation loss within 1% at equal tokens
    (default budget 1B tokens; use `TOTAL_TOKENS` for a shorter run while iterating), at **≥ 50% of PyTorch-eager MFU**.
-5. **Final project proposal** (see `docs/week12/final-project.md`), due at the end of this week.
+5. **Final project proposal** (see `docs/week12/final-project.md`), written before you start week 12.
 
 ## Report
 

@@ -8,12 +8,17 @@ enumerating them.  It exists so that you can check *your tests* before you
 check *your compiler*:
 
     python reference/oracle.py tests/week01/*.uir          # check expectations
-    python reference/oracle.py -v tests/week04/sum.uir     # print every value
+    python reference/oracle.py -v tests/week04/dot.uir     # print every asserted value
 
-It ignores `# max-kernels` (it has no kernels) and does not implement the
-week-1 "provable by the required rules" restriction: `prove` passes here if
-the condition is *true for every value* of its variables.  (Unprovable-but-
-true tests are caught by reference/simplify_check.py.)
+What it does NOT check, because it has no compiler inside:
+
+  * `# max-kernels` (it has no kernels).
+  * Provability.  `prove c` passes here if `c` is true for every value of its
+    variables, and a load/store passes if every index it actually computes is
+    in bounds.  Your compiler must *derive* both from the required rules
+    (docs/uir-spec.md section 3).  So a test can pass the oracle and still be
+    one that no sound compiler accepts: when you write a `prove` or a bounds
+    test, check by hand that the required rules are enough.
 """
 from __future__ import annotations
 import itertools, math, re, sys
@@ -28,6 +33,7 @@ ALU2 = {"add", "sub", "mul", "div", "mod", "max", "min", "cmplt", "cmpeq", "cmpn
 ALU1 = {"neg", "not", "sqrt", "exp2", "log2", "sin", "recip"}
 OPS = ALU2 | ALU1 | {"where", "cast", "var", "assert", "assertclose", "prove", "buffer", "store", "load", "range", "end",
                      "expand", "reduce", "index", "contiguous", "reshape", "permute", "pad", "shrink", "flip"}
+KWARGS = {"reduce": {"op", "pop"}, "assertclose": {"atol", "rtol"}}
 I32_MIN, I32_MAX = -2**31, 2**31 - 1
 
 # ---------------------------------------------------------------- parsing
@@ -105,6 +111,8 @@ class Parser:
           key = self.take()[1]; self.take(); kw[key] = self.atom()
         else: args.append(self.atom())
       n = Node(v, args, kw, line=self.line)
+      if bad := set(kw) - KWARGS.get(v, set()):     # a misspelled kwarg must not silently fall back to a default
+        raise CompileError(f"line {self.line}: {v} takes no keyword argument {sorted(bad)[0]!r}")
       typecheck(n)
       return n
     a = self.atom()
@@ -393,7 +401,7 @@ class Evaluator:
       out = b.copy(); out[i] = self.ev(n.args[2], env); return out
     if op == "end":
       ranges = n.args[1:]
-      root = self.chain_root(n.args[0], set(ranges))
+      root = self.chain_root(n.args[0])
       cur = self.ev(root, env).copy()
       outer_live = id(root) in self.live
       for vals in itertools.product(*[range(r.value) for r in ranges]):
@@ -427,7 +435,7 @@ class Evaluator:
       x = self.ev(n.args[0], env); return x[tuple(slice(s, e) for s, e in n.value)].copy()
     raise CompileError(f"line {n.line}: cannot evaluate {op}")
 
-  def chain_root(self, n: Node, ranges: set):
+  def chain_root(self, n: Node):
     """Structural (never dependence-based, so value rewrites can't change it):
     unwrap directly nested `end`s, then walk down `store`s to the first buffer / end."""
     while n.op == "end": n = n.args[0]

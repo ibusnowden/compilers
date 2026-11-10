@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
-<rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 445" width="980" height="445" role="img">
+<title>Two ways to split a layer y = relu(x W₁) W₂ over 4 devices</title>
+<rect x="0.5" y="0.5" width="979" height="444" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <defs><marker id="md64545" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d64545"/></marker></defs>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Two ways to split a layer y = relu(x W₁) W₂ over 4 devices</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">data parallel splits the batch; tensor parallel (Megatron) splits the weights</text>
@@ -36,9 +37,9 @@
 <text x="220.0" y="338.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">full copy</text>
 <rect x="310.0" y="301.0" width="120.0" height="48.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
 <text x="370.0" y="329.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">∇W on dev 3</text>
-<rect x="130.0" y="375.0" width="220.0" height="40.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
-<text x="240.0" y="399.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">allreduce(∇W)  then step</text>
-<line x1="370.0" y1="355.0" x2="300.0" y2="375.0" stroke="#d64545" stroke-width="1.6" marker-end="url(#md64545)"/>
+<rect x="250.0" y="380.0" width="240.0" height="40.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="370.0" y="404.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">allreduce(∇W), then step</text>
+<line x1="370.0" y1="351.0" x2="370.0" y2="379.0" stroke="#d64545" stroke-width="1.6" marker-end="url(#md64545)"/>
 <text x="740.0" y="99.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="middle">tensor parallel</text>
 <rect x="530.0" y="115.0" width="90.0" height="48.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
 <text x="575.0" y="135.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">x</text>
@@ -76,8 +77,8 @@
 <rect x="780.0" y="301.0" width="150.0" height="48.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
 <text x="855.0" y="321.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">W₂ rows 3</text>
 <text x="855.0" y="338.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">row shard → partial y</text>
-<rect x="620.0" y="375.0" width="240.0" height="40.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
-<text x="740.0" y="399.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">allreduce(partial y): one per MLP</text>
-<line x1="855.0" y1="355.0" x2="800.0" y2="375.0" stroke="#d64545" stroke-width="1.6" marker-end="url(#md64545)"/>
-<line x1="480.0" y1="100.0" x2="480.0" y2="420.0" stroke="#e3e6eb" stroke-width="1.5"/>
+<rect x="720.0" y="380.0" width="240.0" height="40.0" rx="8" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="840.0" y="404.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">allreduce(partial y): one per MLP</text>
+<line x1="855.0" y1="351.0" x2="855.0" y2="379.0" stroke="#d64545" stroke-width="1.6" marker-end="url(#md64545)"/>
+<line x1="505.0" y1="100.0" x2="505.0" y2="425.0" stroke="#e3e6eb" stroke-width="1.5"/>
 </svg>

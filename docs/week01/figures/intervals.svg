@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400">
-<rect x="0.5" y="0.5" width="979" height="399" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 390" width="980" height="390" role="img">
+<title>Bounds flow up the graph</title>
+<rect x="0.5" y="0.5" width="979" height="389" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Bounds flow up the graph</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">x ∈ [0, 100], y ∈ [0, 3]:   (4x + y) / 4   simplifies to   x</text>
 <rect x="150.0" y="315.0" width="40.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
@@ -26,7 +27,7 @@
 <text x="356.0" y="334.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 3]</text>
 <text x="150.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 400]</text>
 <text x="255.0" y="179.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 403]</text>
-<text x="355.0" y="104.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#8c1f1f" text-anchor="start">?</text>
+<text x="355.0" y="104.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="start">[0, 100]</text>
 <rect x="520.0" y="92.0" width="430.0" height="204.0" rx="8" fill="#fbfbfd" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
 <text x="532.0" y="113.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="600" fill="#6b7280" text-anchor="start">why it is allowed</text>
 <text x="532.0" y="139.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">rule 5:  e = a·c + b,  c = 4</text>
@@ -40,5 +41,6 @@
 <text x="532.0" y="265.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  y / 4  →  0</text>
 <rect x="524.0" y="270.0" width="422.0" height="18.0" rx="3" fill="#efeafa" stroke="#efeafa" stroke-width="0" opacity="1"/>
 <text x="532.0" y="283.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">  x + 0  →  x</text>
-<text x="735.0" y="368.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">if x could be negative, truncating division breaks rule 5: x = −1 gives 0, not −1</text>
+<text x="735.0" y="330.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">intervals alone give DIV ∈ [0, 100];  rule 5 proves it is exactly x</text>
+<text x="490.0" y="370.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#8c1f1f" text-anchor="middle">if x could be negative, truncating division breaks rule 5:  x = −1 gives (−4 + 3) / 4 = 0, not −1</text>
 </svg>

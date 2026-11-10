@@ -4,8 +4,10 @@ import pathlib
 import numpy as np
 import pytest
 from uc import Tensor
-from helpers import close, slow
+from helpers import close, slow, models
 from ref import configs
+
+pytestmark = models
 
 torch = pytest.importorskip("torch")
 DATA = pathlib.Path(__file__).resolve().parents[2] / "data"

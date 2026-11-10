@@ -5,7 +5,7 @@ library. Every method builds UOps. Nothing runs until `.realize()`, `.numpy()`, 
 or `.tolist()`. This page is the contract the tests rely on. Anything not listed here is up to you.
 
 > **Check your tests against PyTorch.** `UC_TORCH_SHIM=1 pytest tests/week06` replaces `uc` with
-> `reference/torch_shim.py`, a ~300-line PyTorch implementation of this exact API.
+> `reference/torch_shim/`, a ~350-line PyTorch implementation of this exact API.
 > If a test fails under the shim, the *test* is wrong.
 
 ## Creating tensors

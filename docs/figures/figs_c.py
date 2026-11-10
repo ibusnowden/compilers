@@ -8,29 +8,29 @@ def fig(path):
 # ============================================================ week 9
 @fig("week09/figures/gemm_hierarchy.svg")
 def gemm_hierarchy():
-  s = SVG(980, 440, "A fast GEMM is tiles inside tiles", "each level stages data one step closer to the tensor cores; every level is a split range in your IR")
+  s = SVG(980, 455, "A fast GEMM is tiles inside tiles", "each level stages data one step closer to the tensor cores; every level is a split range in your IR")
   # level boxes
   s.box(30, 100, 280, 280, "", "orange")
   s.text(170, 120, "C, tiled for the grid", size=13, anchor="middle", weight=700, color=C["orange"][2])
   for r in range(4):
     for c in range(4):
       s.rect(55 + c * 58, 140 + r * 56, 58, 56, "#2a9d9d" if (r, c) == (1, 2) else "#fdf0e1", "#e08a2c", 0, sw=1)
-  s.text(170, 370, "block tile 128×128 → one CTA", size=11, anchor="middle", color=MUTED)
+  s.text(170, 398, "block tile 128×128 → one CTA", size=12, anchor="middle", color=MUTED)
   s.line(55 + 3 * 58, 140 + 56, 360, 110, LINE, dash="3 3"); s.line(55 + 3 * 58, 140 + 112, 360, 380, LINE, dash="3 3")
   s.box(360, 100, 280, 280, "", "teal")
   s.text(500, 120, "block tile, split across warps", size=13, anchor="middle", weight=700, color=C["teal"][2])
   for r in range(2):
     for c in range(4):
       s.rect(385 + c * 58, 140 + r * 112, 58, 112, "#2e9e6a" if (r, c) == (0, 1) else "#e2f4f4", "#2a9d9d", 0, sw=1)
-  s.text(500, 370, "warp tile 64×32 (8 warps)", size=11, anchor="middle", color=MUTED)
+  s.text(500, 398, "warp tile 64×32 (8 warps)", size=12, anchor="middle", color=MUTED)
   s.line(385 + 2 * 58, 140, 690, 110, LINE, dash="3 3"); s.line(385 + 2 * 58, 252, 690, 380, LINE, dash="3 3")
   s.box(690, 100, 260, 280, "", "green")
   s.text(820, 120, "warp tile in mma fragments", size=13, anchor="middle", weight=700, color=C["green"][2])
   for r in range(4):
     for c in range(4):
       s.rect(715 + c * 52, 140 + r * 52, 52, 52, "#2e9e6a" if (r, c) == (0, 0) else "#e5f5ec", "#2e9e6a", 0, sw=1)
-  s.text(820, 370, "mma.m16n8k16: 16×8 per instruction", size=11, anchor="middle", color=MUTED)
-  s.text(490, 410, "global → (cp.async / TMA) → shared memory → (ldmatrix) → registers → (mma) → accumulators in registers", size=12, anchor="middle", color=INK)
+  s.text(820, 398, "mma.m16n8k16: 16×8 per instruction", size=12, anchor="middle", color=MUTED)
+  s.text(490, 430, "global → (cp.async / TMA) → shared memory → (ldmatrix) → registers → (mma) → accumulators in registers", size=12, anchor="middle", color=INK)
   return s
 
 @fig("week09/figures/pipeline_smem.svg")
@@ -83,7 +83,7 @@ def flash():
 # ============================================================ week 10
 @fig("week10/figures/sharding.svg")
 def sharding():
-  s = SVG(980, 440, "Two ways to split a layer y = relu(x W₁) W₂ over 4 devices", "data parallel splits the batch; tensor parallel (Megatron) splits the weights")
+  s = SVG(980, 445, "Two ways to split a layer y = relu(x W₁) W₂ over 4 devices", "data parallel splits the batch; tensor parallel (Megatron) splits the weights")
   cols = ["blue", "green", "orange", "purple"]
   s.text(240, 95, "data parallel", size=14, anchor="middle", weight=700)
   for d in range(4):
@@ -91,36 +91,32 @@ def sharding():
     s.box(40, y, 90, 48, f"x[{d}::4]", cols[d], size=12, mono=True, sub="¼ of batch")
     s.box(160, y, 120, 48, "W₁, W₂", "gray", size=12, sub="full copy")
     s.box(310, y, 120, 48, f"∇W on dev {d}", cols[d], size=12)
-  s.box(130, 375, 220, 40, "allreduce(∇W)  then step", "red", size=12)
-  s.arrow(370, 355, 300, 375, color="#d64545")
+  s.box(250, 380, 240, 40, "allreduce(∇W), then step", "red", size=12)
+  s.arrow(370, 351, 370, 379, color="#d64545")
   s.text(740, 95, "tensor parallel", size=14, anchor="middle", weight=700)
   for d in range(4):
     y = 115 + d * 62
     s.box(530, y, 90, 48, "x", "gray", size=12, mono=True, sub="replicated")
     s.box(640, y, 120, 48, f"W₁ cols {d}", cols[d], size=12, sub="column shard")
     s.box(780, y, 150, 48, f"W₂ rows {d}", cols[d], size=12, sub="row shard → partial y")
-  s.box(620, 375, 240, 40, "allreduce(partial y): one per MLP", "red", size=12)
-  s.arrow(855, 355, 800, 375, color="#d64545")
-  s.line(480, 100, 480, 420, color="#e3e6eb")
+  s.box(720, 380, 240, 40, "allreduce(partial y): one per MLP", "red", size=12)
+  s.arrow(855, 351, 855, 379, color="#d64545")
+  s.line(505, 100, 505, 425, color="#e3e6eb")
   return s
 
 @fig("week10/figures/ring.svg")
 def ring():
-  s = SVG(980, 400, "Ring allreduce", "reduce-scatter (N−1 steps) then all-gather (N−1 steps): each device sends 2(N−1)/N of the data, independent of N")
+  s = SVG(980, 420, "Ring allreduce", "reduce-scatter (N−1 steps) then all-gather (N−1 steps): each device sends 2(N−1)/N of the data, independent of N")
   import math
-  cx, cy, R = 220, 230, 120
+  cx, cy, R, gap = 220, 252, 112, 0.36          # gap: where an arc stops short of a device (radians)
   cols = ["blue", "green", "orange", "purple"]
   for d in range(4):
     a = -math.pi / 2 + d * math.pi / 2
-    x, y = cx + R * math.cos(a), cy + R * math.sin(a)
-    s.circle(x, y, 34, cols[d], f"dev {d}", size=12)
-    a2 = -math.pi / 2 + (d + 1) * math.pi / 2
-    x2, y2 = cx + R * math.cos(a2), cy + R * math.sin(a2)
-    mx, my = cx + (R + 40) * math.cos((a + a2) / 2), cy + (R + 40) * math.sin((a + a2) / 2)
-    s.curve(x + 30 * math.cos(a + 0.9), y + 30 * math.sin(a + 0.9), mx, my, x2 - 30 * math.cos(a2 - 0.9 + math.pi), y2 - 30 * math.sin(a2 - 0.9 + math.pi), color="#5b6474")
-  s.text(cx, cy, "send to\nthe right", size=11, anchor="middle", color=MUTED)
+    s.arc(cx, cy, R, a + gap, a + math.pi / 2 - gap)
+    s.circle(cx + R * math.cos(a), cy + R * math.sin(a), 34, cols[d], f"dev {d}", size=12)
+  s.text(cx, cy, "each device sends\nto its neighbour", size=11, anchor="middle", color=MUTED)
   # chunk table
-  x0, y0, cw = 470, 120, 100
+  x0, y0, cw = 470, 140, 100
   for c in range(4): s.text(x0 + 95 + c * cw, y0 - 14, f"chunk {c}", size=11, anchor="middle", color=MUTED, weight=600)
   after = [["a0", "Σ1", "a2", "a3"], ["b0", "b1", "Σ2", "b3"], ["c0", "c1", "c2", "Σ3"], ["Σ0", "d1", "d2", "d3"]]
   for d in range(4):
@@ -199,9 +195,9 @@ def train_step():
 # ============================================================ weeks 12-14
 @fig("week12/figures/timeline.svg")
 def timeline():
-  s = SVG(980, 280, "Final project, three weeks", "propose · build · measure · write it up")
+  s = SVG(980, 240, "Final project, three weeks", "propose · build · measure · write it up")
   ms = [("proposal", "1 page: claim,\nbaseline, metric", "yellow"), ("week 12", "reproduce the baseline\nend to end", "blue"),
-        ("week 13", "the idea, behind a flag;\ntests that pin it", "orange"), ("week 14", "ablations, the report,\na 10-min talk", "green")]
+        ("week 13", "the idea, behind a flag;\ntests that pin it", "orange"), ("week 14", "ablations, then\nthe report", "green")]
   for i, (a, b, col) in enumerate(ms):
     x = 40 + i * 235
     s.box(x, 110, 210, 50, a, col, size=14, weight=700)

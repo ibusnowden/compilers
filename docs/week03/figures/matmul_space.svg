@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" width="980" height="460">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" width="980" height="460" role="img">
+<title>Matmul is a 3-D iteration space</title>
 <rect x="0.5" y="0.5" width="979" height="459" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Matmul is a 3-D iteration space</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">C[i,j] += A[i,k] · B[k,j]:  i, j index the output; k is reduced</text>

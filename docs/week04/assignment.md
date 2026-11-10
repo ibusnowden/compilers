@@ -1,6 +1,6 @@
 # Week 4 assignment — rangeify, reduce, materialization
 
-**Grade:** `python tools/grade.py 4` (weeks 1–4). From this week on, `# max-kernels` is enforced.
+**Done when:** `pytest tests/week{01..04}` passes. From this week on, `# max-kernels` is enforced.
 
 ## Deliverables
 

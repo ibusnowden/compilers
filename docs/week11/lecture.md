@@ -112,7 +112,7 @@ When it doesn't, bisect: the forward logits at step 0, then the gradients at ste
 the first optimizer step. Almost every training bug is one of these:
 
 * a gradient that's wrong only for a shape the tiny model doesn't exercise (heads > 1, T not a power of two),
-* weight decay applied to biases and norms (the reference doesn't),
+* weight decay on the wrong parameters (the tiny test decays everything; the 124M reference run skips biases and norms),
 * the learning-rate schedule off by one step,
 * `assign` versioning (week 2) letting the optimizer read a half-updated parameter.
 

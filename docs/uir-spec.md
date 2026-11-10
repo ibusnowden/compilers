@@ -11,6 +11,9 @@ Nothing is ever removed.
 > ("tests due" each week), run them through the oracle first:
 > `python reference/oracle.py tests/week01/mine/*.uir`.
 > If this document and the oracle disagree, it's a bug. Fix both.
+>
+> One limit: the oracle evaluates. It accepts a `prove` that is *true* and an index that is *in bounds*, even when the
+> required rules (§3) can't derive it. A compiler may reject such a program, so keep your own tests within the rules.
 
 ---
 
@@ -64,8 +67,8 @@ Weeks 6+ add `f16`, `bf16`, `i8`, `u8`, `i64` through the Python Tensor API (see
 |---|---|---|
 | `add a b`, `sub a b`, `mul a b` | T,T→T (T ∈ i32,f32) | i32 wraps mod 2³² |
 | `neg a` | T→T | |
-| `div a b` | i32: truncates toward zero (C `/`). f32: IEEE division | i32 division by a zero constant is a **compile error**. f32 `/0` gives inf/nan |
-| `mod a b` | i32 only | C `%`: sign follows the dividend. `mod -7 2 = -1` |
+| `div a b` | T,T→T (T ∈ i32,f32) | i32 truncates toward zero (C `/`), and division by a zero constant is a **compile error**. f32 is IEEE division: `/0` gives inf/nan |
+| `mod a b` | i32,i32→i32 | C `%`: the sign follows the dividend, so `mod -7 2 = -1`. A zero constant divisor is a compile error |
 | `max a b`, `min a b` | T,T→T | for f32, if either is nan the result is nan |
 | `cmplt a b`, `cmpeq a b`, `cmpne a b` | T,T→bool (T ∈ bool,i32,f32) | IEEE: every comparison with nan is false, except `cmpne`, which is true |
 | `and a b`, `or a b`, `xor a b` | T,T→T (T ∈ bool,i32) | bitwise for i32 |
@@ -101,14 +104,16 @@ Rules for week 1:
    *like terms are collected* (`x*2 + x*3 → x*5`, `x + x → x*2`). Constant terms are combined
    (`(x+3)+4 → x+7`). All of this is sound mod 2³², so it needs no bounds.
 4. **Bounds (interval) analysis.** Each i32 node has `[vmin, vmax]`. These are computed **exactly** and
-   widened to the full i32 range whenever the exact result could leave it.
+   widened to the full i32 range whenever the exact result could leave it. Intervals propagate through
+   constants, `var`/`range`, `add`, `mul`, `max`, `min`, `where`, and `div`/`mod` by a positive constant
+   (`[amin/c, amax/c]`, and `[0, min(amax, c-1)]` when `amin ≥ 0`). Everything else gets the full range.
    * `cmplt a b → true` if `vmax(a) < vmin(b)`. `→ false` if `vmin(a) ≥ vmax(b)`.
    * `cmpeq a b → false` if the intervals don't overlap.
    * `max a b → a` if `vmin(a) ≥ vmax(b)` (and symmetrically). Likewise for `min`.
    * any i32 node whose interval is a single point `[c, c]` → `c`.
 5. **Division and modulo by a positive constant `c`.**
    For `e = a*c + b`, with `vmin(e) ≥ 0`, `vmin(b) ≥ 0`, and `e` provably not overflowing:
-   `e / c → a + b/c` and `e % c → b % c`.
+   `e / c → a + b/c` and `e % c → b % c`. `b` may be absent (`b = 0`): `(x*2)/2 → x` when `x*2` can't overflow.
    Also `b % c → b` whenever `0 ≤ vmin(b)` and `vmax(b) < c`.
    The interval rule above then finishes jobs like `(4x+3)/4 → x` when `x ≥ 0`.
 
@@ -178,7 +183,7 @@ Values may now have a **shape**. A list literal `[1 2 3]` is an i32 tensor of sh
 |---|---|---|
 | `[a b c …]` | | rank-1 tensor. Elements are literals of one dtype |
 | `expand x S…` | | broadcast. In week 4: `x` is a scalar and `S` is one size, so `expand 1 3` gives `[1 1 1]` |
-| `reduce x op=OP pop=K` | | reduces the **last K axes** with `OP ∈ {add, mul, max, min}`. The result has rank − K |
+| `reduce x op=OP pop=K` | | reduces the **last K axes** with `OP ∈ {add, mul, max, min}`. The result has rank − K. `pop` defaults to 1. An unknown keyword is a compile error |
 | `index x i…` | | scalar element at static indices (constants) |
 | `contiguous x` | | identity, but forces `x` to be materialized into a buffer (a kernel boundary) |
 

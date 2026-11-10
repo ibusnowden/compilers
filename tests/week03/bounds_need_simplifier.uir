@@ -1,5 +1,9 @@
-# in bounds only if you simplify: (4i+j)/4 = i and (4i+j)%4 = j
+# Bounds are checked AFTER simplification.
+# Intervals alone accept the first load:  (4i+j)/4 is in [0, 31]/4 = [0, 7].
+# They reject the second:  (4i+j)/4 + i*(-1) is in [0, 7] + [-7, 0] = [-7, 7].
+# Rule 5 turns (4i+j)/4 into i, and collecting like terms (rule 3) leaves the constant 0.
 %b = buffer i32 [0 1 2 3 4 5 6 7]
+%z = buffer i32 [5]
 %o = buffer i32 32
 %i = range 8
 %j = range 4
@@ -8,3 +12,4 @@
 %o1 = end %s %i %j
 %t1 = assert (load %o1 31) 7
 %t2 = assert (load %o1 9) 2
+%t3 = assert (load %z (add (div %e 4) (mul %i -1))) 5

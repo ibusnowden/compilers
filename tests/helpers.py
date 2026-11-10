@@ -5,10 +5,6 @@ import pytest
 
 DEVICE = os.environ.get("UC_DEVICE", "CPU")
 
-def is_shim():
-  import uc
-  return getattr(uc, "SHIM", False)
-
 skip_if_shim = pytest.mark.skipif("os.environ.get('UC_TORCH_SHIM') == '1'", reason="needs a real compiler (kernel counts / perf)")
 
 def torch_or_skip():
@@ -24,6 +20,7 @@ def has_cuda():
 needs_cuda = pytest.mark.skipif(not has_cuda(), reason="needs an NVIDIA GPU (and torch for reference timings)")
 perf = pytest.mark.perf          # deselect with -m "not perf"
 slow = pytest.mark.slow          # deselect with -m "not slow"
+models = pytest.mark.models      # needs uc/models/*.py, which you write; deselect with -m "not models"
 
 def close(a, b, atol=1e-5, rtol=1e-4):
   a = a.numpy() if hasattr(a, "numpy") and not isinstance(a, np.ndarray) else a

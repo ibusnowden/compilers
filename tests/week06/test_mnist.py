@@ -4,7 +4,9 @@ import numpy as np
 import pytest
 from uc import Tensor, optim
 from uc.nn.state import get_parameters
-from helpers import slow
+from helpers import slow, models
+
+pytestmark = models
 
 DATA = pathlib.Path(__file__).resolve().parents[2] / "data" / "mnist"
 

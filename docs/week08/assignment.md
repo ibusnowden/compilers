@@ -1,6 +1,6 @@
 # Week 8 assignment — GPUs
 
-**Grade:** `python tools/grade.py 8`, which also reruns **all of week 6 with `UC_DEVICE=CUDA`**. Plus `pytest tests/week08 -m perf -s` in `REPORT.md`.
+**Done when:** `pytest tests/week{01..08}` passes, **all of week 6 passes again on the GPU** (`UC_DEVICE=CUDA pytest tests/week06`), and `pytest tests/week08 -m perf -s` meets its targets (output in `REPORT.md`).
 
 ## Deliverables
 

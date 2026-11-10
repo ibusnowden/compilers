@@ -17,7 +17,7 @@ def load_shard(path):
   return np.memmap(path, dtype=np.uint16, mode="r", offset=256 * 4, shape=(int(header[2]),))
 
 class Loader:
-  def __init__(self, split, B, T, seed=0):
+  def __init__(self, split, B, T):
     self.files = sorted(glob.glob(str(DATA / f"fineweb_{split}_*.bin")))
     if not self.files: raise SystemExit("python tools/download.py fineweb")
     self.B, self.T, self.i, self.pos = B, T, 0, 0

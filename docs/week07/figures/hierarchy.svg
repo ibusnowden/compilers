@@ -1,32 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440" role="img">
+<title>The memory hierarchy (one modern x86 core, rough numbers)</title>
 <rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">The memory hierarchy (one modern x86 core, rough numbers)</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">every level is ~10× bigger and ~3–10× slower than the one above it</text>
-<polygon points="238.0,100.0 362.0,100.0 380.0,152.0 220.0,152.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
-<text x="300.0" y="130.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#1d3f8f" text-anchor="middle">registers</text>
-<text x="640.0" y="122.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~2 KB</text>
-<text x="740.0" y="122.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">0 cycles</text>
-<text x="850.0" y="122.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~1 KB/cycle</text>
-<polygon points="183.0,162.0 417.0,162.0 435.0,214.0 165.0,214.0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
-<text x="300.0" y="192.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="middle">L1d</text>
-<text x="640.0" y="184.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">48 KB</text>
-<text x="740.0" y="184.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~5 cycles</text>
-<text x="850.0" y="184.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~128 B/cycle</text>
-<polygon points="128.0,224.0 472.0,224.0 490.0,276.0 110.0,276.0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
-<text x="300.0" y="254.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="middle">L2</text>
-<text x="640.0" y="246.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">1–2 MB</text>
-<text x="740.0" y="246.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~14 cycles</text>
-<text x="850.0" y="246.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~64 B/cycle</text>
-<polygon points="73.0,286.0 527.0,286.0 545.0,338.0 55.0,338.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
-<text x="300.0" y="316.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="middle">L3 (shared)</text>
-<text x="640.0" y="308.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">32+ MB</text>
-<text x="740.0" y="308.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~50 cycles</text>
-<text x="850.0" y="308.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~32 B/cycle</text>
-<polygon points="18.0,348.0 582.0,348.0 600.0,400.0 0.0,400.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
-<text x="300.0" y="378.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="middle">DRAM</text>
-<text x="640.0" y="370.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">GBs</text>
-<text x="740.0" y="370.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~300 cycles</text>
-<text x="850.0" y="370.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~10 B/cycle/core</text>
+<polygon points="258.0,100.0 372.0,100.0 390.0,152.0 240.0,152.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="315.0" y="130.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#1d3f8f" text-anchor="middle">registers</text>
+<text x="640.0" y="130.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~2 KB</text>
+<text x="740.0" y="130.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">0 cycles</text>
+<text x="850.0" y="130.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~1 KB/cycle</text>
+<polygon points="208.0,162.0 422.0,162.0 440.0,214.0 190.0,214.0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="315.0" y="192.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="middle">L1d</text>
+<text x="640.0" y="192.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">48 KB</text>
+<text x="740.0" y="192.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~5 cycles</text>
+<text x="850.0" y="192.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~128 B/cycle</text>
+<polygon points="158.0,224.0 472.0,224.0 490.0,276.0 140.0,276.0" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="315.0" y="254.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#145757" text-anchor="middle">L2</text>
+<text x="640.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">1–2 MB</text>
+<text x="740.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~14 cycles</text>
+<text x="850.0" y="254.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~64 B/cycle</text>
+<polygon points="108.0,286.0 522.0,286.0 540.0,338.0 90.0,338.0" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="315.0" y="316.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8a4a0b" text-anchor="middle">L3 (shared)</text>
+<text x="640.0" y="316.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">32+ MB</text>
+<text x="740.0" y="316.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~50 cycles</text>
+<text x="850.0" y="316.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~32 B/cycle</text>
+<polygon points="58.0,348.0 572.0,348.0 590.0,400.0 40.0,400.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="315.0" y="378.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="middle">DRAM</text>
+<text x="640.0" y="378.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">GBs</text>
+<text x="740.0" y="378.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~300 cycles</text>
+<text x="850.0" y="378.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">~10 B/cycle/core</text>
 <text x="640.0" y="91.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="700" fill="#6b7280" text-anchor="start">size</text>
 <text x="740.0" y="91.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="700" fill="#6b7280" text-anchor="start">latency</text>
 <text x="850.0" y="91.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="700" fill="#6b7280" text-anchor="start">bandwidth</text>

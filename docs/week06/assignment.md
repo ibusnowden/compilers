@@ -1,10 +1,10 @@
 # Week 6 assignment — autodiff & speed
 
-**Grade:** `python tools/grade.py 6`. Weeks 1–5 still run. The new tests are Python (`tests/week06/*.py`).
+**Done when:** `pytest tests/week{01..06}` passes. The new tests are Python (`tests/week06/*.py`).
 
 ## Deliverables
 
-1. `compiler/uc/tensor.py`: the [Tensor API](../tensor-api.md) on top of your UOps (rename `tensor.py.week6`).
+1. `compiler/uc/tensor.py`: the [Tensor API](../tensor-api.md) on top of your UOps (a new file).
 2. `compiler/uc/autodiff.py`: reverse mode as a graph transformation, with every rule in lecture 6.2.
 3. `compiler/uc/nn/`, `compiler/uc/optim.py`: modules, SGD, AdamW, and safetensors I/O (with bf16).
 4. `compiler/uc/stats.py` counters wired into your runtime (kernels, compiles, flops, bytes).

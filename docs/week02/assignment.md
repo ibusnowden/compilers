@@ -1,6 +1,6 @@
 # Week 2 assignment — loads, stores & memory
 
-**Grade:** `python tools/grade.py 2` (weeks 1–2)
+**Done when:** `pytest tests/week{01..02}` passes.
 
 ## Deliverables
 
@@ -15,7 +15,7 @@
 
 ## Checklist
 
-- [ ] `pytest tests/week02` and the cumulative `python tools/grade.py 2` pass
+- [ ] `pytest tests/week{01..02}` passes
 - [ ] Shuffling the order of independent statements in any week-2 test doesn't change the result
 - [ ] `DEBUG=1` prints the linearized program
 
