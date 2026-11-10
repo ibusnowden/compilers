@@ -8,6 +8,4 @@ benchmarks/out/
 *.part
 docs/**/*.png
 REPORT.md
-
-# Keep solutions local only
-solutions/
+*.egg-info/

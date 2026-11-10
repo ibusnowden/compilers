@@ -1,6 +1,6 @@
 # Benchmarks (weeks 9–11)
 
-These are scripts, not tests. Run them on the H100 and put the numbers in your weekly report.
+These are scripts, not tests. Run them on the H100 and keep the numbers in your `REPORT.md`.
 
 | script | week | what it measures |
 |---|---|---|

@@ -1,5 +1,6 @@
 import json, struct
 import numpy as np
+import torch
 from uc.tensor import Tensor
 from uc.dtype import dtypes
 
@@ -7,7 +8,6 @@ _ST = {"F32": dtypes.f32, "F16": dtypes.f16, "BF16": dtypes.bf16, "I32": dtypes.
 _ST_INV = {v: k for k, v in _ST.items()}
 
 def safe_load(path):
-  import torch
   with open(path, "rb") as f: data = f.read()
   n = struct.unpack("<Q", data[:8])[0]
   header = json.loads(data[8:8 + n]); base = 8 + n
@@ -25,7 +25,7 @@ def safe_load(path):
 def safe_save(tensors, path):
   header, chunks, off = {}, [], 0
   for k, t in tensors.items():
-    b = t.t.detach().cpu().contiguous().view(-1).view(__import__("torch").uint8).numpy().tobytes()
+    b = t.t.detach().cpu().contiguous().view(-1).view(torch.uint8).numpy().tobytes()
     header[k] = {"dtype": _ST_INV[t.dtype], "shape": list(t.shape), "data_offsets": [off, off + len(b)]}
     chunks.append(b); off += len(b)
   h = json.dumps(header).encode(); h += b" " * (-len(h) % 8)

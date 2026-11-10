@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400">
-<rect x="0.5" y="0.5" width="979" height="399" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 350" width="980" height="350" role="img">
+<title>realize(): from a lazy graph to launches</title>
+<rect x="0.5" y="0.5" width="979" height="349" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <defs><marker id="m2e9e6a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e9e6a"/></marker></defs>
 <defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">realize(): from a lazy graph to launches</text>
@@ -31,7 +32,7 @@
 <text x="889.0" y="217.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">bind buffers,</text>
 <text x="889.0" y="230.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">run</text>
 <line x1="801.0" y1="155.0" x2="819.0" y2="155.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<path d="M573.0,190.0 L573.0,270.0 L889.0,270.0 L889.0,190.0" fill="none" stroke="#2e9e6a" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#m2e9e6a)"/>
-<text x="731.0" y="287.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">hit: skip compile</text>
-<text x="490.0" y="344.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">hash-consing pays again: identical kernels are the identical UOp, so the cache key is free</text>
+<path d="M633.0,190.0 L633.0,258.0 L829.0,258.0 L829.0,192.0" fill="none" stroke="#2e9e6a" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#m2e9e6a)"/>
+<text x="731.0" y="277.9" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">cache hit: skip compile</text>
+<text x="490.0" y="322.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">hash-consing pays again: identical kernels are the identical UOp, so the cache key is free</text>
 </svg>

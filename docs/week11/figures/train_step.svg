@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" width="980" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" width="980" height="300" role="img">
+<title>One training step, captured once and replayed</title>
 <rect x="0.5" y="0.5" width="979" height="299" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">One training step, captured once and replayed</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">the JIT records the kernel launches of a step; later steps rebind the input buffers and launch the same list</text>

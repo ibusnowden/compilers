@@ -1,54 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420">
-<rect x="0.5" y="0.5" width="999" height="419" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" width="1000" height="370" role="img">
+<title>What uc looks like by week 11</title>
+<rect x="0.5" y="0.5" width="999" height="369" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <defs><marker id="m7c5cc4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c5cc4"/></marker></defs>
 <defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">What uc looks like by week 11</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">every arrow is a graph_rewrite or a lowering you write</text>
-<rect x="30.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
-<text x="82.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">Tensor API</text>
-<text x="82.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">x @ w + b</text>
-<text x="82.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 6</text>
-<rect x="150.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
-<text x="202.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="middle">UOp graph</text>
-<text x="202.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">lazy, hash-consed</text>
-<text x="202.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 1</text>
-<line x1="135.0" y1="157.0" x2="149.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="270.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
-<text x="322.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">autodiff</text>
-<text x="322.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">grad rewrites</text>
-<text x="322.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 6</text>
-<line x1="255.0" y1="157.0" x2="269.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="390.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
-<text x="442.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">rangeify</text>
-<text x="442.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">shapes → ranges</text>
-<text x="442.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 4–5</text>
-<line x1="375.0" y1="157.0" x2="389.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="510.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
-<text x="562.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#145757" text-anchor="middle">kernel opts</text>
-<text x="562.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">tile · upcast · map</text>
-<text x="562.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 7–9</text>
-<line x1="495.0" y1="157.0" x2="509.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="630.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
-<text x="682.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#165c3b" text-anchor="middle">linearize</text>
-<text x="682.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">graph → list</text>
-<text x="682.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 2–3</text>
-<line x1="615.0" y1="157.0" x2="629.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="750.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
-<text x="802.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">render</text>
-<text x="802.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">C · CUDA</text>
-<text x="802.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 3, 8</text>
-<line x1="735.0" y1="157.0" x2="749.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="870.0" y="120.0" width="105.0" height="74.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
-<text x="922.5" y="153.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">runtime</text>
-<text x="922.5" y="170.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">clang · NVRTC</text>
-<text x="922.5" y="213.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 3, 8</text>
-<line x1="855.0" y1="157.0" x2="869.0" y2="157.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
-<rect x="150.0" y="270.0" width="700.0" height="46.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
-<text x="500.0" y="297.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">symbolic simplifier + bounds (week 1) — called by every stage</text>
-<line x1="235.0" y1="270.0" x2="235.0" y2="196.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
-<line x1="475.0" y1="270.0" x2="475.0" y2="196.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
-<line x1="595.0" y1="270.0" x2="595.0" y2="196.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
-<line x1="715.0" y1="270.0" x2="715.0" y2="196.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
-<rect x="150.0" y="340.0" width="700.0" height="40.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
-<text x="500.0" y="364.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">tests: .uir files (weeks 1–5) · Tensor-API pytest (weeks 6–11) · cumulative every week</text>
+<rect x="30.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="82.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">Tensor API</text>
+<text x="82.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">x @ w + b</text>
+<text x="82.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 6</text>
+<rect x="150.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="202.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#45297f" text-anchor="middle">UOp graph</text>
+<text x="202.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">lazy, hash-consed</text>
+<text x="202.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 1</text>
+<line x1="135.0" y1="149.0" x2="149.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="270.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
+<text x="322.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#1d3f8f" text-anchor="middle">autodiff</text>
+<text x="322.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">grad rewrites</text>
+<text x="322.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 6</text>
+<line x1="255.0" y1="149.0" x2="269.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="390.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="442.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">rangeify</text>
+<text x="442.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">shapes → ranges</text>
+<text x="442.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 4–5</text>
+<line x1="375.0" y1="149.0" x2="389.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="510.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#e2f4f4" stroke="#2a9d9d" stroke-width="1.5" opacity="1"/>
+<text x="562.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#145757" text-anchor="middle">kernel opts</text>
+<text x="562.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">tile · upcast · map</text>
+<text x="562.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 7–9</text>
+<line x1="495.0" y1="149.0" x2="509.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="630.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#e5f5ec" stroke="#2e9e6a" stroke-width="1.5" opacity="1"/>
+<text x="682.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#165c3b" text-anchor="middle">linearize</text>
+<text x="682.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">graph → list</text>
+<text x="682.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 2–3</text>
+<line x1="615.0" y1="149.0" x2="629.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="750.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#fdf0e1" stroke="#e08a2c" stroke-width="1.5" opacity="1"/>
+<text x="802.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#8a4a0b" text-anchor="middle">render</text>
+<text x="802.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">C · CUDA</text>
+<text x="802.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 3, 8</text>
+<line x1="735.0" y1="149.0" x2="749.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="870.0" y="112.0" width="105.0" height="74.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="922.5" y="145.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="600" fill="#384152" text-anchor="middle">runtime</text>
+<text x="922.5" y="162.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">clang · NVRTC</text>
+<text x="922.5" y="103.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">week 3, 8</text>
+<line x1="855.0" y1="149.0" x2="869.0" y2="149.0" stroke="#5b6474" stroke-width="1.6" marker-end="url(#m5b6474)"/>
+<rect x="150.0" y="232.0" width="700.0" height="44.0" rx="8" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="500.0" y="258.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">symbolic simplifier + bounds (week 1): every graph stage calls it</text>
+<line x1="202.5" y1="232.0" x2="202.5" y2="188.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
+<line x1="322.5" y1="232.0" x2="322.5" y2="188.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
+<line x1="442.5" y1="232.0" x2="442.5" y2="188.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
+<line x1="562.5" y1="232.0" x2="562.5" y2="188.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
+<line x1="682.5" y1="232.0" x2="682.5" y2="188.0" stroke="#7c5cc4" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#m7c5cc4)"/>
+<rect x="150.0" y="296.0" width="700.0" height="40.0" rx="8" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="500.0" y="320.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">tests: .uir files (weeks 1–5) · Tensor-API pytest (weeks 6–11) · cumulative every week</text>
 </svg>

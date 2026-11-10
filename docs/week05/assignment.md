@@ -1,6 +1,6 @@
 # Week 5 assignment — movement ops
 
-**Grade:** `python tools/grade.py 5` (weeks 1–5)
+**Done when:** `pytest tests/week{01..05}` passes.
 
 ## Deliverables
 

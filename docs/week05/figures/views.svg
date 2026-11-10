@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" width="980" height="470">
-<rect x="0.5" y="0.5" width="979" height="469" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 450" width="980" height="450" role="img">
+<title>Movement ops are index arithmetic</title>
+<rect x="0.5" y="0.5" width="979" height="449" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Movement ops are index arithmetic</text>
 <text x="24.0" y="66.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="start">nothing moves: each op rewrites the index expression used to LOAD from the original buffer</text>
 <text x="60.0" y="104.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="700" fill="#6b7280" text-anchor="start">buffer (6 elements)</text>
@@ -56,5 +57,6 @@
 <text x="342.0" y="291.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">shrink [[2 5]]:  s[i] = buf[i + 2]</text>
 <text x="342.0" y="309.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">flip [0]:        r[i] = buf[5 - i]</text>
 <text x="342.0" y="327.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="400" fill="#1f2430" text-anchor="start">expand [6 4]:    e[i, j] = buf[i]          (j is ignored)</text>
-<text x="640.0" y="444.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">(i*3 + j)/3 → i  and  (i*3 + j)%3 → j  are week-1 rule 5: reshape round-trips simplify away</text>
+<text x="640.0" y="376.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">(i*3 + j)/3 → i  and  (i*3 + j)%3 → j  are week-1 rule 5:</text>
+<text x="640.0" y="396.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" xml:space="preserve" font-weight="400" fill="#45297f" text-anchor="middle">a reshape round-trip simplifies away, so it costs nothing</text>
 </svg>

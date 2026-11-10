@@ -2,18 +2,17 @@
 
 ## Format
 
-The course follows a university semester, but it's built for self-study.
+Eleven weeks of building one compiler, then a three-week project. It's paced like a semester and built for self-study.
 
 * **Lectures:** three per week (`docs/weekNN/lecture.md`, sections N.1–N.3). Each takes 60–90 minutes to read
-  and work through, with diagrams, code, and pointers to primary sources.
-* **Quizzes:** one per week (`docs/weekNN/quiz.md`). Take it *after* the lectures and *before* the assignment.
-  Answers are folded under each question. Score yourself honestly. Anything you miss tends to resurface later as a bug.
-* **Semester-long compiler project:** each week has two deadlines:
-  1. **Tests due** (end of lecture 3): write your own tests for the week's features in `tests/weekNN/mine/`
-     and check them against the oracle or the shim. Writing tests first forces you to understand the semantics
-     before you commit to an implementation.
-  2. **Compiler due** (two days later): `python tools/grade.py N` passes, **cumulatively**. Week N runs every test
-     from weeks 1 to N, including your own tests from earlier weeks.
+  and work through.
+* **Quiz:** one per week (`docs/weekNN/quiz.md`). Take it *after* the lectures and *before* the assignment.
+  Answers are folded under each question. Anything you miss tends to resurface later as a bug.
+* **Assignment** (`docs/weekNN/assignment.md`), always in two steps:
+  1. **Tests first:** write your own tests for the week's features in `tests/weekNN/mine/` and check them against
+     the oracle or the shim. This forces you to understand the semantics before you commit to an implementation.
+  2. **Then the compiler:** make the tests pass, **cumulatively**. In week N, run every test from weeks 1 to N
+     (`pytest tests/week{01..NN}`), including the tests you wrote in earlier weeks.
 * **Final project** (weeks 12–14): extend `uc`. Implement a paper, port it to unusual hardware, or pursue your
   own idea. See [the guide](docs/week12/final-project.md).
 
@@ -23,31 +22,29 @@ The course follows a university semester, but it's built for self-study.
 |---|---|
 | 1 | Lecture 1. Read the assignment. Sketch the data structures |
 | 2 | Lecture 2. Write tests (`tests/weekNN/mine/`) and run them under the oracle or shim |
-| 3 | Lecture 3. Take the quiz. **Tests due.** Start the implementation |
-| 4–5 | Implement. Run the cumulative grader often. Refactor before moving on. **Compiler due** |
+| 3 | Lecture 3. Take the quiz. Finish your tests. Start the implementation |
+| 4–5 | Implement. Rerun all the weeks so far, often. Refactor before moving on |
 
-## Grading (if you want numbers)
+## When is a week done?
 
-| component | weight |
-|---|---|
-| Weekly compiler (11 × cumulative public tests + your tests) | 50% |
-| Weekly tests you wrote (coverage of the spec; would they catch a wrong compiler?) | 10% |
-| Quizzes | 10% |
-| Final project: code, results, report | 30% |
+* `pytest tests/week{01..NN}` passes: every public test and every test of yours, for weeks 1 to N.
+* Your own tests pass the oracle or the shim, and would catch a wrong compiler (not just a crashing one).
+* You can answer the quiz without looking.
+* Weeks 7–9 only: the **performance tests** (`-m perf`) meet their targets on quiet hardware.
 
-A week's compiler grade is the fraction of tests passing on weeks 1..N at the deadline. **Performance tests**
-(`-m perf`, weeks 7–9) count when you run them on quiet hardware and paste the output into `REPORT.md`.
+Keep a `REPORT.md` at the repo root as a lab notebook (it's gitignored): perf numbers, timings, and the design
+decisions the assignments ask you to write down. The final report draws on it.
 
-## Policies
+## Ground rules
 
-* **Simplicity is a requirement.** Line counts are a soft signal. If one week's diff adds more than ~1500 lines,
-  stop and ask what can be deleted. The reference design's whole compiler stays in the low thousands of lines.
-* **Pure Python + C/CUDA source.** `uc` may import numpy (for host-side arrays and tests only) and `ctypes`.
+* **Simplicity is a requirement.** If one week's diff adds more than ~1500 lines, stop and ask what can be deleted.
+  The whole compiler should stay in the low thousands of lines.
+* **Pure Python + C/CUDA source.** `uc` may import numpy (for host-side arrays only) and `ctypes`.
   It must not import torch, triton, cupy, jax, or tvm. You call clang and NVRTC yourself.
   PyTorch appears only in the tests, as a reference.
-* **Regressions count.** The grader is cumulative on purpose.
-* **Using AI assistants.** Allowed for explanations and reviews. Every line you commit must be a line you can
-  explain. The quizzes and final report will find out if you can't.
+* **Regressions count.** A week isn't done while an earlier week's test fails.
+* **AI assistants** are for explanations and reviews, not for writing your compiler. Every line you commit should be
+  one you can explain. The quizzes are how you find out.
 
 ## Hardware
 

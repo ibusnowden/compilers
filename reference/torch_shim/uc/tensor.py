@@ -166,11 +166,13 @@ class Tensor:
   def clip(self, lo, hi): return self._w(self.t.clamp(lo, hi))
 
   # ---- reductions
-  def sum(self, axis=None, keepdim=False): return self._w(self.t.sum(dim=axis, keepdim=keepdim) if axis is not None else (self.t.sum().reshape([1] * self.ndim) if keepdim else self.t.sum()))
-  def mean(self, axis=None, keepdim=False): return self._w(self.t.mean(dim=axis, keepdim=keepdim) if axis is not None else self.t.mean())
-  def max(self, axis=None, keepdim=False): return self._w(self.t.amax(dim=axis, keepdim=keepdim) if axis is not None else self.t.max())
-  def min(self, axis=None, keepdim=False): return self._w(self.t.amin(dim=axis, keepdim=keepdim) if axis is not None else self.t.min())
-  def var(self, axis=None, keepdim=False): return self._w(self.t.var(dim=axis, keepdim=keepdim, correction=0) if axis is not None else self.t.var(correction=0))
+  def _reduce(self, fn, axis, keepdim, **kw):   # axis=None means every axis
+    return self._w(fn(self.t, dim=tuple(range(self.ndim)) if axis is None else axis, keepdim=keepdim, **kw))
+  def sum(self, axis=None, keepdim=False): return self._reduce(torch.sum, axis, keepdim)
+  def mean(self, axis=None, keepdim=False): return self._reduce(torch.mean, axis, keepdim)
+  def max(self, axis=None, keepdim=False): return self._reduce(torch.amax, axis, keepdim)
+  def min(self, axis=None, keepdim=False): return self._reduce(torch.amin, axis, keepdim)
+  def var(self, axis=None, keepdim=False): return self._reduce(torch.var, axis, keepdim, correction=0)
   def argmax(self, axis=-1): return self._w(self.t.argmax(dim=axis).to(torch.int32))
   def softmax(self, axis=-1): return self._w(self.t.softmax(axis))
   def log_softmax(self, axis=-1): return self._w(self.t.log_softmax(axis))

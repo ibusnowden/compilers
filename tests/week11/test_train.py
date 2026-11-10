@@ -3,12 +3,13 @@ import numpy as np
 import pytest
 from uc import Tensor, optim
 from uc.nn.state import get_parameters
-from helpers import close, DEVICE
+from helpers import close, DEVICE, models
 from ref import configs
 
 torch = pytest.importorskip("torch")
 from ref import gpt2_torch  # noqa: E402
 
+@models
 def test_gpt2_tiny_training_matches_torch():
   from uc.models.gpt2 import GPT2
   cfg, steps = configs.GPT2_TINY, 20

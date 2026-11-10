@@ -1,6 +1,6 @@
 # Week 7 assignment — memory hierarchies, kernels, threading
 
-**Grade:** `python tools/grade.py 7`, plus `pytest tests/week07 -m perf -s` on a quiet machine (paste the output into `REPORT.md`).
+**Done when:** `pytest tests/week{01..07}` passes, and `pytest tests/week07 -m perf -s` meets its targets on a quiet machine (paste the output into `REPORT.md`).
 
 ## Deliverables
 

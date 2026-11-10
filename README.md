@@ -20,7 +20,7 @@ By the end of the course you should be able to:
 
 ## Schedule
 
-Self-paced: one week ≈ 3 lectures + a test deadline + a compiler deadline. Do the weeks in order.
+Self-paced. Each week: read 3 lectures, take the quiz, write your own tests, then write the compiler. Do the weeks in order.
 
 | week | topic | example | lecture notes | quiz | assignment |
 |---|---|---|---|---|---|
@@ -37,7 +37,8 @@ Self-paced: one week ≈ 3 lectures + a test deadline + a compiler deadline. Do 
 | 11 | **SOTA inference & training.** Qwen/Llama decode, GPT-2 124M training, JIT | `@jit` | [notes](docs/week11/lecture.md) | [quiz](docs/week11/quiz.md) | [hw](docs/week11/assignment.md) |
 | 12–14 | **Final project.** A paper, unusual hardware, or your own idea | | [guide](docs/week12/final-project.md) | | proposal → code + report |
 
-The full course policies are in [SYLLABUS.md](SYLLABUS.md).
+**Start with [mapping.md](mapping.md):** what you write each week, where everything is, and how to work through it.
+The ground rules and the reading list are in [SYLLABUS.md](SYLLABUS.md).
 
 ## Repository layout
 
@@ -50,9 +51,10 @@ reference/oracle.py an executable spec of UIR: checks .uir tests without a compi
 reference/torch_shim/  the Tensor API on PyTorch: checks Python tests and your model code
 docs/               lectures, quizzes, assignments, the UIR spec, the Tensor API, figures
 benchmarks/         roofline, LLM decode speed, GPT-2 training (yours vs PyTorch)
-tools/              download.py (data and weights), grade.py (cumulative grading)
-solutions/          a reference week-1 rewriter and reference models (spoilers! see solutions/README.md)
+tools/              download.py (data and weights)
 ```
+
+There are no solutions in this repository: `compiler/uc/` is stubs, and you write the rest.
 
 ## Quick start
 
@@ -63,10 +65,12 @@ pip install -e compiler
 
 UC_ORACLE=1 pytest tests/week01      # the tests themselves are right (the oracle passes them)
 pytest tests/week01                  # ...and your compiler doesn't yet. Start at docs/week01/lecture.md
-python tools/grade.py 1              # cumulative: week N runs weeks 1..N
+pytest tests/week{01..03}            # later: always rerun every week so far (here, weeks 1-3)
 ```
 
-Requirements: Python ≥ 3.11, `clang` (week 3+), an NVIDIA GPU with a CUDA driver (week 8+). The course
+The Python tests for weeks 1 and 6+ import `uc`, so they fail until you've written that week's code.
+
+Requirements: Python ≥ 3.11, `clang` (week 3+; any clang-compatible driver on your `PATH` named `clang` works, including `zig cc`), an NVIDIA GPU with a CUDA driver (week 8+). The course
 assumes one **H100**. Week 10 explains how to test multi-GPU code on it, and when to rent more GPUs.
 
 ## The two reference tools
@@ -79,25 +83,26 @@ without a working compiler:
 * **`reference/torch_shim`** implements [the Tensor API](docs/tensor-api.md) with PyTorch.
   `UC_TORCH_SHIM=1 pytest tests/week06` checks the Python tests *and* your `uc/models/*.py` code.
 
-If a test fails under these tools, the test is wrong. If it passes under them and fails on `uc`, your compiler is wrong.
+If a test fails under these tools, the test is wrong. If it passes under them and fails on `uc`, your compiler is
+wrong, with one exception: the oracle checks that a `prove` is *true* and that indices are *in bounds*, not that the
+[required rules](docs/uir-spec.md#the-required-simplification-rules-for-prove) can derive it. Check that part of your own tests by hand.
 
-## Note: extending `uc` after the course
+## Extending `uc` after the course
 
-Ways to extend it after the course:
+Finish the weeks in order first: each one depends on the last. The [final project](docs/week12/final-project.md) is
+the natural first extension, and its guide lists concrete ideas. Directions that go beyond it:
 
 - **New backends:** Metal, ROCm/AMD, Vulkan, WebGPU, or emitting LLVM IR or MLIR instead of C source.
-- **Better optimization:** autotuning or search over schedules, equality saturation in the style of egg (it's on the week 1 reading list), and cost models.
-- **Low precision:** fp8 and int4 quantization, sparsity.
-- **A model front end:** importing ONNX or PyTorch graphs, so it can run models that weren't written with its own Tensor API.
-- **Serving features:** KV-cache paging, continuous batching, speculative decoding.
+- **Better optimization:** search over schedules, cost models, equality saturation (egg is on the week-1 reading list).
+- **Low precision:** fp8 training, int4 inference, sparsity.
+- **A model front end:** import ONNX or PyTorch graphs, so `uc` runs models that weren't written against its Tensor API.
+- **Serving:** KV-cache paging, continuous batching, speculative decoding.
 
-Things to check first:
+Before you publish anything built on this:
 
-- **License:** this repo has no LICENSE file. If you plan to publish your compiler or build something on top of the course materials, find out where the course came from and what terms it allows.
-- **Course-only parts:** the grading tools, quizzes and the `solutions/` folder only matter for the course. If you spin the compiler off as its own project, you'd probably move `compiler/uc/` and the tests into a separate repo and leave the rest behind.
-- **Hardware assumptions:** weeks 8–11 are tuned for an H100. To support other GPUs you'd need to make the backend more general.
-
-The best order is to finish the course in sequence, because each week depends on the last. Then use the final project as the first step toward your own compiler.
+- **License:** the repo has no LICENSE file. Find out what terms the course materials allow.
+- **Split the repo:** only `compiler/uc/` and the tests are the compiler. Lectures and quizzes are course material.
+- **Hardware:** weeks 8–11 are tuned for one H100. Other GPUs need a more general backend.
 
 ## Regenerating the figures
 

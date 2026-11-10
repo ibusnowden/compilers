@@ -37,16 +37,15 @@ how you'll measure it. Three categories, with examples:
 
 1. **Proposal** (end of week 11, 1 page): the claim, the baseline, the metric, the tests you'll add, the risks,
    and a fallback scope if the full idea doesn't work out.
-2. **Code** (week 14): behind a flag, with tests. The full cumulative grader still passes.
+2. **Code** (week 14): behind a flag, with tests. Every earlier week's tests still pass.
 3. **Report** (week 14, 4–6 pages, `docs/final/REPORT.md` or a PDF): motivation, design, what didn't work,
    results with error bars, ablations, and how to reproduce every number.
-4. **Talk** (optional for self-study, highly recommended): 10 minutes, one demo.
 
-## Rubric
+## Judging your own project
 
-| | weight |
-|---|---|
-| Technical depth and correctness (tests, soundness, the full suite still passes) | 35% |
-| Results: a real measurement against a fair baseline, with an honest analysis | 30% |
-| Simplicity: the change is as small as the idea allows; no regressions in code quality | 15% |
-| Report: clear, reproducible, says what failed | 20% |
+In order of importance:
+
+1. **Correct:** it has tests, the rewrites are sound, and the full suite still passes.
+2. **Measured:** a real number against a fair baseline, with an honest analysis.
+3. **Small:** the change is as small as the idea allows, and the code is no worse for it.
+4. **Reproducible:** the report is clear, and it says what failed.

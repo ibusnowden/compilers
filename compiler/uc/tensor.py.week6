@@ -1,2 +1,0 @@
-"""Week 6: the Tensor front end (docs/tensor-api.md).  Rename to tensor.py when you start week 6.
-A Tensor is a thin wrapper around a UOp. Every method builds graph; realize() schedules, compiles, runs."""

@@ -1,6 +1,6 @@
 # Week 3 assignment — loops, rendering & runtime
 
-**Grade:** `python tools/grade.py 3` (weeks 1–3)
+**Done when:** `pytest tests/week{01..03}` passes.
 
 ## Deliverables
 
@@ -15,7 +15,7 @@
 
 ## Checklist
 
-- [ ] `UC_BACKEND=interp python tools/grade.py 3` and `UC_BACKEND=c python tools/grade.py 3` both pass
+- [ ] `UC_BACKEND=interp pytest tests/week{01..03}` and `UC_BACKEND=c pytest tests/week{01..03}` both pass
 - [ ] A differential test: run every `.uir` file under both backends and compare all asserted values
 - [ ] `DEBUG=2` prints the generated C
 

@@ -2,7 +2,7 @@
 
 > **Goal of the week:** kernel optimizations expressed as **rewrites on a kernel's ranges** (split, reorder, unroll,
 > upcast, parallelize), a way to choose them (heuristics, then search), and CPU kernels within a small factor of
-> numpy/OpenBLAS. The week pauses for spring break, so there's time to measure carefully.
+> numpy/OpenBLAS. Take the time to measure carefully: this week is as much about benchmarking as about code.
 
 ---
 

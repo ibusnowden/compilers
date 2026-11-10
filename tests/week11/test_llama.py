@@ -2,8 +2,10 @@
 import numpy as np
 import pytest
 from uc import Tensor
-from helpers import close, DEVICE
+from helpers import close, DEVICE, models
 from ref import configs
+
+pytestmark = models
 
 torch = pytest.importorskip("torch")
 from ref import llama_torch  # noqa: E402

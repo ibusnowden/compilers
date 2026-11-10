@@ -57,8 +57,9 @@ No runtime checks are allowed. That decision has consequences:
 
 * A loaded value has no useful bounds (it could be anything), so `load %b (load %idx 0)` is rejected.
   Clamp it, `max 0 (min (load …) 3)`, and the bounds become `[0, 3]`. (See `old_version_depends_on_new.uir`.)
-* The quality of your simplifier now decides which programs compile. In week 3, `load %b (div (add (mul %i 4) %j) 4)`
-  is in bounds only if rule 5 fires (`bounds_need_simplifier.uir`).
+* The quality of your simplifier now decides which programs compile. In week 3, the index
+  `(4i + j)/4 + i·(−1)` is always 0, but its interval is `[-7, 7]`. It is in bounds only if rule 5 and
+  like-term collection fire before you check (`bounds_need_simplifier.uir`).
 
 This is the payoff from week 1. Later, GPU kernels index with exactly this kind of expression, and an out-of-bounds
 access on a GPU isn't an exception. It's silent corruption or a hang.

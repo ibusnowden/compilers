@@ -1,6 +1,6 @@
 # Week 9 assignment — tensor cores, GEMM, conv, flash attention
 
-**Grade:** `python tools/grade.py 9` and `pytest tests/week09 -m perf -s` in `REPORT.md`.
+**Done when:** `pytest tests/week{01..09}` and `UC_DEVICE=CUDA pytest tests/week06` pass, and `pytest tests/week09 -m perf -s` meets its targets (output in `REPORT.md`).
 
 ## Deliverables
 

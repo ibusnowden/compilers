@@ -1,7 +1,7 @@
 # Week 1 — UOps & rewrites
 
 > **Goal of the week:** a hash-consed graph IR, a pattern-matching rewrite engine, and a symbolic simplifier
-> with bounds. By Friday, `run_uir("%sum = add 2 3\n%test = assert %sum 5")` works, and so does
+> with bounds. By the end, `run_uir("%sum = add 2 3\n%test = assert %sum 5")` works, and so does
 > `prove (cmpeq (div (add (mul %x 4) %y) 4) %x)`.
 
 Everything later in the course is built from this week's three pieces: **UOp**, **PatternMatcher**, and
@@ -152,6 +152,9 @@ pm = PatternMatcher([
 ])
 ```
 
+`UPat.cvar(name, arg=None)` is a helper worth adding: a named pattern that matches only a `CONST`. It isn't part of
+the required interface (the tests use `UPat(Ops.CONST, name=..., arg=...)`), but you'll write it a hundred times.
+
 ### graph_rewrite
 
 ```python
@@ -166,6 +169,9 @@ def graph_rewrite(sink, pm):
     return out
   return rw(sink)
 ```
+
+This sketch recurses, to stay readable. Yours must not: a 20,000-node chain overflows Python's stack. Walk the
+nodes in `toposort()` order instead, or keep an explicit stack as `toposort` does.
 
 Three properties to keep in mind:
 

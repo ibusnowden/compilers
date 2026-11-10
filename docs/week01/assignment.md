@@ -1,6 +1,6 @@
 # Week 1 assignment — UOps & rewrites
 
-**Tests due:** end of lecture 1.3 · **Compiler due:** two days later · **Grade:** `python tools/grade.py 1`
+**Done when:** `pytest tests/week01` passes.
 
 ## Deliverables
 
@@ -21,7 +21,7 @@
 - [ ] `UC_ORACLE=1 pytest tests/week01` passes (sanity: your environment works)
 - [ ] `pytest tests/week01/test_uop.py` passes before you start the simplifier
 - [ ] `pytest tests/week01` passes, including `cse_big_dag.uir` in well under a second
-- [ ] `python solutions/check_provable.py tests/week01/mine/*.uir` (optional): checks that your `prove` tests follow from the required rules
+- [ ] For each `prove` test of yours, you've checked by hand that the required rules derive it (the oracle only checks that it's true)
 - [ ] Every rule in `symbolic.py` has a one-line comment explaining why it is sound
 
 ## Constraints

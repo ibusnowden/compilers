@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" width="980" height="380">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" width="980" height="380" role="img">
+<title>graph_rewrite: bottom-up to a fixed point</title>
 <rect x="0.5" y="0.5" width="979" height="379" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <defs><marker id="m7c5cc4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c5cc4"/></marker></defs>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">graph_rewrite: bottom-up to a fixed point</text>
@@ -10,21 +11,19 @@
 <text x="90.0" y="214.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">MUL</text>
 <rect x="188.0" y="195.0" width="44.0" height="30.0" rx="15.0" fill="#e8effc" stroke="#3b6fd8" stroke-width="1.5" opacity="1"/>
 <text x="210.0" y="214.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#1d3f8f" text-anchor="middle">MUL</text>
-<rect x="42.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
-<text x="60.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">x</text>
-<rect x="102.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
-<text x="120.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">2</text>
-<rect x="162.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
-<text x="180.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">x</text>
-<rect x="222.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
-<text x="240.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">3</text>
+<rect x="32.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="50.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">2</text>
+<rect x="132.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#efeafa" stroke="#7c5cc4" stroke-width="1.5" opacity="1"/>
+<text x="150.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#45297f" text-anchor="middle">x</text>
+<rect x="232.0" y="275.0" width="36.0" height="30.0" rx="15.0" fill="#f1f3f6" stroke="#9aa3b2" stroke-width="1.5" opacity="1"/>
+<text x="250.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#384152" text-anchor="middle">3</text>
 <line x1="150.0" y1="155.0" x2="90.0" y2="195.0" stroke="#9aa3b2" stroke-width="1.5"/>
 <line x1="150.0" y1="155.0" x2="210.0" y2="195.0" stroke="#9aa3b2" stroke-width="1.5"/>
-<line x1="90.0" y1="225.0" x2="60.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
-<line x1="90.0" y1="225.0" x2="120.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
-<line x1="210.0" y1="225.0" x2="180.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
-<line x1="210.0" y1="225.0" x2="240.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
-<text x="150.0" y="327.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">two x leaves are ONE node</text>
+<line x1="90.0" y1="225.0" x2="50.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="90.0" y1="225.0" x2="142.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="210.0" y1="225.0" x2="158.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<line x1="210.0" y1="225.0" x2="250.0" y2="275.0" stroke="#9aa3b2" stroke-width="1.5"/>
+<text x="150.0" y="327.2" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">x is ONE node, used by both MULs</text>
 <text x="150.0" y="340.4" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">(hash-consing)</text>
 <line x1="285.0" y1="210.0" x2="345.0" y2="210.0" stroke="#7c5cc4" stroke-width="1.6" marker-end="url(#m7c5cc4)"/>
 <text x="315.0" y="204.8" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" xml:space="preserve" font-weight="400" fill="#6b7280" text-anchor="middle">match</text>

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" width="980" height="440" role="img">
+<title>Reverse mode: one backward pass gives every gradient</title>
 <rect x="0.5" y="0.5" width="979" height="439" rx="14" fill="#ffffff" stroke="#e3e6eb"/>
 <defs><marker id="m5b6474" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6474"/></marker></defs>
 <text x="24.0" y="40.6" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" xml:space="preserve" font-weight="700" fill="#1f2430" text-anchor="start">Reverse mode: one backward pass gives every gradient</text>
@@ -21,10 +22,10 @@
 <text x="690.0" y="99.5" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" xml:space="preserve" font-weight="700" fill="#8c1f1f" text-anchor="middle">backward (gradients flow down)</text>
 <rect x="615.0" y="135.0" width="150.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
 <text x="690.0" y="154.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dL = 1</text>
-<rect x="615.0" y="205.0" width="150.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
-<text x="690.0" y="224.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dS = expand(1)</text>
-<rect x="615.0" y="275.0" width="150.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
-<text x="690.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dR = dS · (m &gt; 0)</text>
+<rect x="595.0" y="205.0" width="190.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="690.0" y="224.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dS = expand(dL)</text>
+<rect x="595.0" y="275.0" width="190.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
+<text x="690.0" y="294.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dR = dS · (x·w &gt; 0)</text>
 <rect x="505.0" y="350.0" width="150.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>
 <text x="580.0" y="369.2" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" xml:space="preserve" font-weight="500" fill="#8c1f1f" text-anchor="middle">dx = dR · w</text>
 <rect x="725.0" y="350.0" width="150.0" height="30.0" rx="15.0" fill="#fbe9e9" stroke="#d64545" stroke-width="1.5" opacity="1"/>

@@ -20,23 +20,23 @@ def rangeify():
   s.node(560, 360, "r = RANGE 4", "orange", w=120)
   for a, b in [((560, 140), (560, 165)), ((560, 195), (560, 220)), ((560, 250), (480, 280)), ((560, 250), (640, 280)), ((480, 310), (545, 345)), ((640, 310), (575, 345))]:
     s.line(*a, *b)
-  s.curve(645, 180, 720, 280, 620, 355, color="#e08a2c", dash="4 3", head=False)
-  s.text(712, 245, "closes r", size=11, color=C["orange"][2])
+  s.curve(645, 180, 800, 300, 620, 360, color="#e08a2c", dash="4 3")
+  s.text(722, 300, "creates r,\nand closes it", size=11, color=C["orange"][2])
   s.code(760, 120, 200, ["float acc = 0;", "for (r = 0; r < 4; r++)", "  acc += x[r]*y[r];", "out[0] = acc;"], size=11, title="rendered", color="orange")
   return s
 
 @fig("week04/figures/materialize.svg")
 def materialize():
-  s = SVG(980, 440, "To materialize or to recompute?", "y = x − max(x):  the scalar max(x) is needed by every element")
+  s = SVG(980, 400, "To materialize or to recompute?", "y = x − max(x):  the scalar max(x) is needed by every element")
   s.text(250, 92, "fuse: 1 kernel, O(n²) work", size=14, anchor="middle", weight=700, color=C["orange"][2])
   s.code(40, 108, 420, ["for i in range(n):            # output", "  m = -inf", "  for r in range(n):          # reduce, again", "    m = max(m, x[r])", "  y[i] = x[i] - m"], size=12, color="orange", hl={2: "red", 3: "red"})
   s.text(730, 92, "materialize: 2 kernels, O(n) work", size=14, anchor="middle", weight=700, color=C["green"][2])
   s.code(520, 108, 420, ["# kernel 1", "m = -inf", "for r in range(n): m = max(m, x[r])", "M[0] = m                      # buffer", "# kernel 2", "for i in range(n): y[i] = x[i] - M[0]"], size=12, color="green", hl={3: "green"})
-  s.rect(40, 290, 900, 120, "#fbfbfd", "#e3e6eb", 10)
-  s.text(60, 315, "A workable default policy (week 4):", size=13, weight=700)
-  s.text(60, 342, "• materialize a REDUCE whose result is EXPANDed (used by more outputs than it has elements)", size=12, color=MUTED)
-  s.text(60, 364, "• materialize anything marked contiguous, and every program output", size=12, color=MUTED)
-  s.text(60, 386, "• fuse everything else: elementwise ops and movement ops are always free to recompute", size=12, color=MUTED)
+  s.rect(40, 256, 900, 120, "#fbfbfd", "#e3e6eb", 10)
+  s.text(60, 281, "A workable default policy (week 4):", size=13, weight=700)
+  s.text(60, 308, "• materialize a REDUCE whose result is EXPANDed (used by more outputs than it has elements)", size=12, color=MUTED)
+  s.text(60, 330, "• materialize anything marked contiguous, and every program output", size=12, color=MUTED)
+  s.text(60, 352, "• fuse everything else: elementwise ops and movement ops are always free to recompute", size=12, color=MUTED)
   return s
 
 @fig("week04/figures/reduce_acc.svg")
@@ -56,7 +56,7 @@ def reduce_acc():
 # ============================================================ week 5
 @fig("week05/figures/views.svg")
 def views():
-  s = SVG(980, 470, "Movement ops are index arithmetic", "nothing moves: each op rewrites the index expression used to LOAD from the original buffer")
+  s = SVG(980, 450, "Movement ops are index arithmetic", "nothing moves: each op rewrites the index expression used to LOAD from the original buffer")
   # buffer
   s.text(60, 100, "buffer (6 elements)", size=12, weight=700, color=MUTED)
   s.grid(60, 112, 1, 6, 40, "#e5f5ec", [[0, 1, 2, 3, 4, 5]])
@@ -77,7 +77,8 @@ def views():
     "flip [0]:        r[i] = buf[5 - i]",
     "expand [6 4]:    e[i, j] = buf[i]          (j is ignored)",
   ], size=12, title="the index expression each view produces", color="blue", hl={3: "purple", 4: "purple"})
-  s.text(640, 440, "(i*3 + j)/3 → i  and  (i*3 + j)%3 → j  are week-1 rule 5: reshape round-trips simplify away", size=12, anchor="middle", color=C["purple"][2])
+  s.text(640, 372, "(i*3 + j)/3 → i  and  (i*3 + j)%3 → j  are week-1 rule 5:", size=12, anchor="middle", color=C["purple"][2])
+  s.text(640, 392, "a reshape round-trip simplifies away, so it costs nothing", size=12, anchor="middle", color=C["purple"][2])
   return s
 
 @fig("week05/figures/matmul_expand.svg")
@@ -92,8 +93,8 @@ def matmul_expand():
     s.text(x + cols * 13, y + rows * 26 + 16, sub, size=11, anchor="middle", color=MUTED)
   slab(50, 130, 2, 3, "blue", "A (2,3)", "rows i, cols k")
   slab(50, 270, 2, 3, "green", "Bᵀ (2,3)", "rows j, cols k")
-  s.arrow(150, 155, 220, 175, label="expand j", loff=(0, -10))
-  s.arrow(150, 295, 220, 255, label="expand i", loff=(0, 12))
+  s.arrow(140, 156, 236, 176, label="expand over j", loff=(20, -14))
+  s.arrow(140, 296, 236, 256, label="expand over i", loff=(28, 18))
   # cube of products (i,j) x k
   for i in range(2):
     for j in range(2):
@@ -101,10 +102,10 @@ def matmul_expand():
       for k in range(3):
         s.rect(x + k * 26, y, 26, 26, "#fdf0e1", "#e08a2c", 0, sw=1)
       s.text(x + 39, y + 40, f"(i={i}, j={j})", size=10, anchor="middle", color=MUTED)
-  s.text(370, 128, "a · b   shape (2, 2, 3)", size=12, anchor="middle", weight=700, color=C["orange"][2])
-  s.arrow(500, 210, 570, 210, label="reduce pop=1", color="#e08a2c")
-  s.grid(590, 175, 2, 2, 36, "#fdf0e1", [["Σk", "Σk"], ["Σk", "Σk"]])
-  s.text(626, 160, "C (2, 2)", size=12, anchor="middle", weight=700, color=C["orange"][2])
+  s.text(349, 128, "a · b   shape (2, 2, 3): one strip of k per (i, j)", size=12, anchor="middle", weight=700, color=C["orange"][2])
+  s.arrow(468, 210, 572, 210, label="reduce pop=1", color="#e08a2c")
+  s.grid(590, 174, 2, 2, 36, "#fdf0e1", [["Σk", "Σk"], ["Σk", "Σk"]])
+  s.text(626, 158, "C (2, 2)", size=12, anchor="middle", weight=700, color=C["orange"][2])
   s.code(700, 120, 260, ["for i in range(2):", "  for j in range(2):", "    acc = 0", "    for k in range(3):", "      acc += A[i*3+k]", "           * B[k*2+j]", "    C[i*2+j] = acc"], size=11, title="after rangeify: 1 kernel", color="orange")
   s.text(490, 390, "expand costs nothing: it just ignores an index. Nothing of size M·N·K is ever allocated.", size=12, anchor="middle", color=MUTED)
   return s
@@ -129,8 +130,8 @@ def autodiff():
   s.arrow(100, 345, 175, 305); s.arrow(280, 345, 205, 305); s.arrow(190, 275, 190, 236); s.arrow(190, 205, 190, 166)
   # backward
   s.text(690, 95, "backward (gradients flow down)", size=13, anchor="middle", weight=700, color=C["red"][2])
-  bw = [("dL = 1", 690, 150), ("dS = expand(1)", 690, 220), ("dR = dS · (m > 0)", 690, 290), ("dx = dR · w", 580, 365), ("dw = dR · x", 800, 365)]
-  for name, x, y in bw: s.node(x, y, name, "red", w=150)
+  bw = [("dL = 1", 690, 150), ("dS = expand(dL)", 690, 220), ("dR = dS · (x·w > 0)", 690, 290), ("dx = dR · w", 580, 365), ("dw = dR · x", 800, 365)]
+  for name, x, y in bw: s.node(x, y, name, "red", w=190 if "(" in name else 150)
   s.arrow(690, 166, 690, 204); s.arrow(690, 236, 690, 274); s.arrow(670, 306, 600, 349); s.arrow(710, 306, 780, 349)
   s.code(330, 140, 220, ["SUM    → expand", "EXPAND → sum", "MUL    → swap & mul", "RELU   → mask", "RESHAPE→ reshape back", "PERMUTE→ inverse perm", "PAD    → shrink", "SHRINK → pad"], size=11, title="one rule per op", color="purple")
   s.text(490, 420, "every movement op's gradient is another movement op: they stay free", size=12, anchor="middle", color=MUTED)
@@ -151,7 +152,7 @@ def safetensors():
 
 @fig("week06/figures/schedule.svg")
 def schedule():
-  s = SVG(980, 400, "realize(): from a lazy graph to launches", "the scheduler cuts the graph at materialized UOps; each piece is one kernel; the cache is keyed by the kernel's AST")
+  s = SVG(980, 350, "realize(): from a lazy graph to launches", "the scheduler cuts the graph at materialized UOps; each piece is one kernel; the cache is keyed by the kernel's AST")
   steps = [("lazy UOp graph", "Tensor ops", "purple"), ("schedule", "cut at buffers →\nlist of kernels", "orange"), ("kernel AST", "rangeified,\nsimplified", "orange"),
            ("cache lookup", "hash-consed AST\nis the key", "gray"), ("compile", "only on a miss", "gray"), ("launch", "bind buffers,\nrun", "green")]
   for i, (a, b, col) in enumerate(steps):
@@ -159,8 +160,9 @@ def schedule():
     s.box(x, 120, 138, 70, a, col, size=13, weight=600)
     s.text(x + 69, 220, b, size=11, anchor="middle", color=MUTED)
     if i: s.arrow(x - 19, 155, x - 1, 155)
-  s.path([(30 + 3 * 158 + 69, 190), (30 + 3 * 158 + 69, 270), (30 + 5 * 158 + 69, 270), (30 + 5 * 158 + 69, 190)], color="#2e9e6a", label="hit: skip compile", lpos=(30 + 4 * 158 + 69, 284))
-  s.text(490, 340, "hash-consing pays again: identical kernels are the identical UOp, so the cache key is free", size=12, anchor="middle", color=C["purple"][2])
+  hit, launch = 30 + 3 * 158 + 69, 30 + 5 * 158 + 69
+  s.path([(hit + 60, 190), (hit + 60, 258), (launch - 60, 258), (launch - 60, 192)], color="#2e9e6a", label="cache hit: skip compile", lpos=(30 + 4 * 158 + 69, 274))
+  s.text(490, 318, "hash-consing pays again: identical kernels are the identical UOp, so the cache key is free", size=12, anchor="middle", color=C["purple"][2])
   return s
 
 # ============================================================ week 7
@@ -172,11 +174,11 @@ def hierarchy():
             ("DRAM", "GBs", "~300 cycles", "~10 B/cycle/core")]
   cols = ["blue", "teal", "teal", "orange", "red"]
   for i, ((name, size, lat, bw), col) in enumerate(zip(levels, cols)):
-    w = 160 + i * 110; x = 300 - w / 2; y = 100 + i * 62
+    w = 150 + i * 100; x = 315 - w / 2; y = 100 + i * 62
     f, st, t = C[col]
     s.poly([(x + 18, y), (x + w - 18, y), (x + w, y + 52), (x, y + 52)], f, st, 1.5)
-    s.text(300, y + 26, name, size=13, anchor="middle", weight=700, color=t)
-    s.text(640, y + 18, f"{size}", size=12, mono=True); s.text(740, y + 18, lat, size=12, mono=True); s.text(850, y + 18, bw, size=12, mono=True)
+    s.text(315, y + 26, name, size=13, anchor="middle", weight=700, color=t)
+    s.text(640, y + 26, f"{size}", size=12, mono=True); s.text(740, y + 26, lat, size=12, mono=True); s.text(850, y + 26, bw, size=12, mono=True)
   s.text(640, 88, "size", size=11, color=MUTED, weight=700); s.text(740, 88, "latency", size=11, color=MUTED, weight=700); s.text(850, 88, "bandwidth", size=11, color=MUTED, weight=700)
   s.text(490, 425, "a kernel is fast when each byte fetched from a slow level is reused many times from a fast one", size=12, anchor="middle", color=MUTED)
   return s
@@ -201,12 +203,14 @@ def roofline():
     s.line(X(0.01), Y(bw * 0.01), X(ridge), Y(peak), col, 2.2)
     s.line(X(ridge), Y(peak), X(10000), Y(peak), col, 2.2)
     s.text(X(10000) - 4, Y(peak) + dy, lab, size=11, anchor="end", color=col, weight=600)
-  s.text(X(0.012), Y(bw * 6), "diagonal: HBM3 bandwidth ≈ 3.35 TB/s", size=11, color=MUTED)
-  # (AI, fraction of the roof achieved, label, label side)
-  for ai, frac, lab, side in [(1 / 12, 0.85, "a + b  (f32)", 1), (0.6, 0.8, "softmax", 1), (1365, 0.55, "gemm 4096 bf16", -1), (200, 0.45, "flash attention", -1)]:
+  s.text(X(0.012), Y(bw * 6), "slope: HBM3 bandwidth ≈ 3.35 TB/s", size=11, color=MUTED)
+  s.text(x0 - 46, y0 - H - 14, "FLOP/s", size=11, color=MUTED)
+  # (AI, fraction of the roof achieved, label, anchor, dx, dy): example kernels, drawn below their roof
+  for ai, frac, lab, anchor, dx, dy in [(1 / 12, 0.85, "a + b  (f32)", "start", 10, 8), (0.6, 0.8, "softmax", "start", 10, 8),
+                                        (1365, 0.55, "gemm 4096 bf16", "start", 10, 4), (200, 0.3, "flash attention", "start", 10, 4)]:
     f = min(bw * ai, peak_tc) * frac
     s.circle(X(ai), Y(f), 5, "red")
-    s.text(X(ai) + 9 * side, Y(f) + 3, lab, size=10, color=C["red"][2], anchor="start" if side > 0 else "end")
+    s.text(X(ai) + dx, Y(f) + dy, lab, size=11, color=C["red"][2], anchor=anchor)
   s.code(700, 110, 260, ["memory-bound: left of the ridge", "  → fuse, don't move bytes", "", "compute-bound: right of it", "  → tile, use tensor cores", "", "ridge = peak / bandwidth", "  ≈ 295 FLOP/B (bf16 TC)"], size=11, title="reading it", color="teal")
   return s
 
@@ -253,7 +257,8 @@ def h100():
     s.text(x + 70, y + 72, "tensor core", size=10, anchor="middle", color=C["teal"][2], weight=600)
   s.box(645, 350, 290, 40, "registers 256 KB", "blue", size=12)
   s.box(645, 398, 290, 40, "shared memory / L1  228 KB", "green", size=12)
-  s.line(590, 150, 630, 110, LINE, dash="3 3"); s.line(590, 200, 630, 450, LINE, dash="3 3")
+  s.rect(490, 135, 78, 46, "none", C["teal"][2], 8, sw=2.2)                       # the SM being magnified
+  s.line(568, 135, 630, 100, LINE, dash="3 3"); s.line(568, 181, 630, 450, LINE, dash="3 3")
   return s
 
 @fig("week08/figures/axis_map.svg")

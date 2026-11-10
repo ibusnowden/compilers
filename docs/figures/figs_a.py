@@ -37,28 +37,29 @@ def roadmap():
 
 @fig("figures/pipeline.svg")
 def pipeline():
-  s = SVG(1000, 420, "What uc looks like by week 11", "every arrow is a graph_rewrite or a lowering you write")
+  s = SVG(1000, 370, "What uc looks like by week 11", "every arrow is a graph_rewrite or a lowering you write")
   stages = [("Tensor API", "x @ w + b", "blue", "6"), ("UOp graph", "lazy, hash-consed", "purple", "1"),
             ("autodiff", "grad rewrites", "blue", "6"), ("rangeify", "shapes → ranges", "orange", "4–5"),
             ("kernel opts", "tile · upcast · map", "teal", "7–9"), ("linearize", "graph → list", "green", "2–3"),
             ("render", "C · CUDA", "orange", "3, 8"), ("runtime", "clang · NVRTC", "gray", "3, 8")]
-  x, y, w, h = 30, 120, 105, 74
+  x, y, w, h = 30, 112, 105, 74
   for i, (name, sub, col, wk) in enumerate(stages):
     xx = x + i * 120
     s.box(xx, y, w, h, name, col, size=13, weight=600, sub=sub)
-    s.text(xx + w / 2, y + h + 16, f"week {wk}", size=11, anchor="middle", color=MUTED)
+    s.text(xx + w / 2, y - 12, f"week {wk}", size=11, anchor="middle", color=MUTED)
     if i: s.arrow(xx - 15, y + h / 2, xx - 1, y + h / 2)
-  # symbolic underneath
-  s.box(150, 270, 700, 46, "symbolic simplifier + bounds (week 1) — called by every stage", "purple", size=13)
-  for xx in [205, 445, 565, 685]:
-    s.arrow(xx + 30, 270, xx + 30, 196, dash="4 3", color="#7c5cc4", head=True)
-  s.box(150, 340, 700, 40, "tests: .uir files (weeks 1–5) · Tensor-API pytest (weeks 6–11) · cumulative every week", "gray", size=12)
+  # the simplifier sits underneath: one dashed arrow per stage that calls it
+  s.box(150, 232, 700, 44, "symbolic simplifier + bounds (week 1): every graph stage calls it", "purple", size=13)
+  for i in range(1, 6):
+    cx = x + i * 120 + w / 2
+    s.arrow(cx, 232, cx, y + h + 2, dash="4 3", color="#7c5cc4")
+  s.box(150, 296, 700, 40, "tests: .uir files (weeks 1–5) · Tensor-API pytest (weeks 6–11) · cumulative every week", "gray", size=12)
   return s
 
 # ============================================================ week 1
 @fig("week01/figures/tree_vs_dag.svg")
 def tree_vs_dag():
-  s = SVG(940, 400, "Trees duplicate, DAGs share", "a = 1; a1 = a + a; a2 = a1 + a1; a3 = a2 + a2")
+  s = SVG(980, 400, "Trees duplicate, DAGs share", "a = 1;  a1 = a + a;  a2 = a1 + a1;  a3 = a2 + a2")
   # tree
   s.text(230, 92, "as a tree: 2ⁿ nodes", size=13, anchor="middle", weight=600, color=MUTED)
   def tree(cx, cy, depth, spread):
@@ -70,16 +71,16 @@ def tree_vs_dag():
       tree(nx, ny, depth - 1, spread / 2)
   tree(230, 125, 3, 104)
   # dag
-  s.text(640, 92, "hash-consed DAG: n + 1 nodes", size=13, anchor="middle", weight=600, color=MUTED)
+  s.text(610, 92, "hash-consed DAG: n + 1 nodes", size=13, anchor="middle", weight=600, color=MUTED)
   ys = [125, 195, 265, 335]
   labels = ["a3 = +", "a2 = +", "a1 = +", "a = 1"]
   for i, (yy, lab) in enumerate(zip(ys, labels)):
-    s.node(640, yy, lab, "blue" if i < 3 else "gray", w=90)
-    if i < 3:
-      s.curve(622, yy + 15, 590, (yy + ys[i + 1]) / 2, 622, ys[i + 1] - 15)
-      s.curve(658, yy + 15, 690, (yy + ys[i + 1]) / 2, 658, ys[i + 1] - 15)
-  s.text(720, 215, "UOp(ADD, i32, (a1, a1))\n  is UOp(ADD, i32, (a1, a1))", size=11, mono=True, color=C["purple"][2])
-  s.text(720, 262, "building the same node twice\nreturns the same object", size=11, color=MUTED)
+    if i < 3:     # both operands are the same node: two edges to one child
+      s.curve(592, yy + 15, 570, (yy + ys[i + 1]) / 2, 592, ys[i + 1] - 15, head=False)
+      s.curve(628, yy + 15, 650, (yy + ys[i + 1]) / 2, 628, ys[i + 1] - 15, head=False)
+    s.node(610, yy, lab, "blue" if i < 3 else "gray", w=90)
+  s.text(700, 205, "UOp(ADD, i32, (a1, a1))\n  is UOp(ADD, i32, (a1, a1))", size=12, mono=True, color=C["purple"][2])
+  s.text(700, 256, "building the same node twice\nreturns the same object", size=12, color=MUTED)
   s.line(470, 100, 470, 370, color="#e3e6eb")
   return s
 
@@ -91,10 +92,10 @@ def rewrite():
     s.text(cx, top - 4, lab, size=12, anchor="middle", color=MUTED, weight=600)
   g(150, 110, "input")
   s.node(150, 140, "ADD", "blue"); s.node(90, 210, "MUL", "blue"); s.node(210, 210, "MUL", "blue")
-  s.node(60, 290, "x", "purple", w=36); s.node(120, 290, "2", "gray", w=36); s.node(180, 290, "x", "purple", w=36); s.node(240, 290, "3", "gray", w=36)
-  for a, b in [((150, 155), (90, 195)), ((150, 155), (210, 195)), ((90, 225), (60, 275)), ((90, 225), (120, 275)), ((210, 225), (180, 275)), ((210, 225), (240, 275))]:
+  s.node(50, 290, "2", "gray", w=36); s.node(150, 290, "x", "purple", w=36); s.node(250, 290, "3", "gray", w=36)
+  for a, b in [((150, 155), (90, 195)), ((150, 155), (210, 195)), ((90, 225), (50, 275)), ((90, 225), (142, 275)), ((210, 225), (158, 275)), ((210, 225), (250, 275))]:
     s.line(*a, *b)
-  s.text(150, 330, "two x leaves are ONE node\n(hash-consing)", size=11, anchor="middle", color=MUTED)
+  s.text(150, 330, "x is ONE node, used by both MULs\n(hash-consing)", size=11, anchor="middle", color=MUTED)
   s.arrow(285, 210, 345, 210, label="match", color="#7c5cc4")
   # pattern
   s.box(355, 120, 260, 180, "", "purple")
@@ -113,13 +114,13 @@ def rewrite():
 
 @fig("week01/figures/intervals.svg")
 def intervals():
-  s = SVG(980, 400, "Bounds flow up the graph", "x ∈ [0, 100], y ∈ [0, 3]:   (4x + y) / 4   simplifies to   x")
+  s = SVG(980, 390, "Bounds flow up the graph", "x ∈ [0, 100], y ∈ [0, 3]:   (4x + y) / 4   simplifies to   x")
   s.node(170, 330, "x", "purple", w=40); s.node(330, 330, "y", "purple", w=40); s.node(80, 330, "4", "gray", w=36)
   s.node(125, 250, "MUL", "blue"); s.node(230, 175, "ADD", "blue"); s.node(330, 100, "DIV", "blue"); s.node(430, 175, "4", "gray", w=36)
   for a, b in [((125, 265), (80, 315)), ((125, 265), (170, 315)), ((230, 190), (125, 235)), ((230, 190), (330, 315)), ((330, 115), (230, 160)), ((330, 115), (430, 160))]:
     s.line(*a, *b)
   tag = lambda x, y, t, c="purple": s.text(x, y, t, size=12, mono=True, color=C[c][2], weight=600)
-  tag(196, 330, "[0, 100]"); tag(356, 330, "[0, 3]"); tag(150, 250, "[0, 400]"); tag(255, 175, "[0, 403]"); tag(355, 100, "?", "red")
+  tag(196, 330, "[0, 100]"); tag(356, 330, "[0, 3]"); tag(150, 250, "[0, 400]"); tag(255, 175, "[0, 403]"); tag(355, 100, "[0, 100]")
   s.code(520, 92, 430, [
     "rule 5:  e = a·c + b,  c = 4",
     "  a = x,   b = y",
@@ -131,7 +132,8 @@ def intervals():
     "  y / 4  →  0",
     "  x + 0  →  x",
   ], size=12, title="why it is allowed", color="purple", hl={4: "purple", 8: "purple"})
-  s.text(735, 365, "if x could be negative, truncating division breaks rule 5: x = −1 gives 0, not −1", size=11, anchor="middle", color=C["red"][2])
+  s.text(735, 326, "intervals alone give DIV ∈ [0, 100];  rule 5 proves it is exactly x", size=12, anchor="middle", color=C["purple"][2])
+  s.text(490, 366, "if x could be negative, truncating division breaks rule 5:  x = −1 gives (−4 + 3) / 4 = 0, not −1", size=12, anchor="middle", color=C["red"][2])
   return s
 
 @fig("week01/figures/beta.svg")
@@ -213,11 +215,11 @@ def linearize():
 # ============================================================ week 3
 @fig("week03/figures/range_end.svg")
 def range_end():
-  s = SVG(980, 380, "range and end become a loop", "the chain closed by `end` is the loop body; everything else is placed as far out as it can go")
+  s = SVG(980, 340, "range and end become a loop", "the chain closed by `end` is the loop body; everything else is placed as far out as it can go")
   s.code(30, 92, 370, ["%k = buffer i32 [7]", "%o = buffer i32 16", "%i = range 16", "%v = add %i (mul (load %k 0) 3)", "%s = store %o %i %v", "%o1 = end %s %i"], size=12, title="UIR", color="orange", hl={2: "orange", 5: "orange"})
   s.arrow(410, 180, 470, 180, label="linearize\n+ render", color="#e08a2c", lsize=10, loff=(0, -22))
   s.code(480, 92, 470, ["void kernel(int* restrict k, int* restrict o) {", "  int c = k[0] * 3;            // hoisted: no %i", "  for (int i = 0; i < 16; i++) {", "    o[i] = i + c;", "  }", "}"], size=12, title="C", color="orange", hl={1: "purple", 2: "orange", 3: "green"})
-  s.legend(480, 300, [("purple", "loop-invariant: depends on no range → outside"), ("orange", "the range opens a loop; end closes it"), ("green", "the store chain: runs every iteration")])
+  s.legend(480, 262, [("purple", "loop-invariant: depends on no range → outside"), ("orange", "the range opens a loop; end closes it"), ("green", "the store chain: runs every iteration")])
   return s
 
 @fig("week03/figures/matmul_space.svg")
